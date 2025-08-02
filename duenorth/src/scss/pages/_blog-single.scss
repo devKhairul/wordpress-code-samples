@@ -1,0 +1,95 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the single post 
+// -----------------------------------------------------------------------------
+
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+
+.single-post #content {
+    background-color: #F4F4F4;
+
+    & .main a {
+        color: #462F86;
+        font-weight: 500;
+    }
+}
+
+.single-news #content {
+    background-color: #F4F4F4;
+
+    & .main a {
+        color: #462F86;
+        font-weight: 500;
+    }
+}
+
+.post {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    background-color: #FFF;
+    padding: 2rem;
+    border-radius: 1rem;
+
+    
+    & p {
+        margin-bottom: 1rem;
+    }
+    
+    & a {
+        color: $color-purple;
+        font-weight: 700;
+    }
+
+    &__title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+        color: $color-black;
+        line-height: 2rem;
+        padding-bottom: 1rem;
+    }
+
+    &__content {
+
+        h2 {
+            @include heading-title;
+            font-weight: normal;
+
+            strong {
+                font-weight: normal;
+            }
+        }
+    }
+
+    & .wp-post-image {
+        padding: 2rem 0;
+    }
+
+    & .newsletter__form {
+        background-color: $color-lightGrey;
+        padding: 2rem;
+        border-radius: 1rem;
+
+        
+        & h2 {
+            @include font-Montserrat;
+
+            font-size: 1.6rem;
+            margin-bottom: 0.6rem;
+
+
+        }
+
+        & .gform_footer {
+            margin: 0;
+            padding: 0;
+            justify-content: flex-start;
+        }
+
+        & input[type="submit"] {
+           margin-bottom: 0;
+        }
+    }
+}

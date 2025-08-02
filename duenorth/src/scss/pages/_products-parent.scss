@@ -1,0 +1,128 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the products archive
+// -----------------------------------------------------------------------------
+
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+
+
+.post-type-archive-products .site-content {
+    background: $color-white;
+}
+
+.products {
+
+    & .banner__section {
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: $color-white;
+        padding: 4rem 2rem;
+        align-items: center;
+        
+        @include media('>=medium') {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0rem 5rem;
+            height: 25rem;
+            align-items: flex-start;
+        }
+
+        @include media('>=large') {
+            height: 37.5rem;
+        }
+
+        &-title {
+            color: $color-white;
+            font-weight: normal;
+            font-size: 4rem;
+            line-height: 4rem;
+            text-align: left;
+        }
+
+        & p {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 0;
+            text-align: left;
+        }
+  
+    }
+}
+
+.products {
+
+    &__intro {
+        text-align: center
+    }
+
+    &__intro-title {
+        @include heading-title;
+    }
+
+    &__categories {
+
+        margin: 1rem 0;
+        text-align: center;
+
+        @include media('>=small') {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        @include media('>=medium') {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        &__block {
+            background-color: $color-lightGrey;
+            border-bottom: 4px solid $color-white;
+
+            @include media('>=medium') {
+                margin: 0;
+            }
+
+        }
+      
+    }
+    
+    &__thumb img {
+        width: 100%;
+    }
+
+    &__term {
+        
+        & a {
+            color: $color-black;
+            font-weight: bold;
+
+            &:hover {
+                color: $color-purple;
+            }
+        }
+    }
+
+    &__explore {
+
+        & a {
+            color: $color-black;
+            font-weight: bold;
+            border-bottom: 2px solid $color-black;
+            padding-bottom: 0.8rem;
+
+            &:hover {
+                color: $color-purple;
+                border-bottom: 2px solid $color-purple;
+            }
+        }
+    }
+ }
+
+

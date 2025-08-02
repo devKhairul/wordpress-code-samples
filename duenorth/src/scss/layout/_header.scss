@@ -1,0 +1,158 @@
+// This file contains all styles related to the header of the site
+
+
+@import '../abstracts/variables';
+@import "../abstracts/functions";
+
+.ast-primary-header-bar {
+    border: none;
+}
+.site-above-header-wrap {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+}
+.site-primary-header-wrap {
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+.ast-site-identity {
+    padding: 0;
+}
+.astra-logo-svg:not(.sticky-custom-logo .astra-logo-svg,.transparent-custom-logo .astra-logo-svg,.advanced-header-logo .astra-logo-svg) {
+    height: auto;
+}
+.ast-desktop .ast-mega-menu-enabled .astra-megamenu-li:hover .astra-megamenu {
+    padding: 0;
+    border: none;
+}
+.current-menu-parent > a {
+    color: $color-purple !important;
+    font-weight: 700 !important;
+}
+.current_page_item > a {
+    color: $color-purple !important;
+    font-weight: 700 !important;
+}
+.current-menu-item > a {
+    color: $color-purple !important;
+    font-weight: 600 !important;
+}
+.main-navigation {
+
+    & a {
+        font-size: rem(14);
+        border-top: 4px solid #FFF;
+
+        &:hover {
+            color: $color-purple !important;
+            border-top: 4px solid $color-purple;
+        }
+    }
+
+    & .sub-menu {
+        padding-bottom: 1rem;
+        border: none;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+
+        & li {
+            line-height: 0;
+            padding-bottom: rem(5);
+        }
+
+        & a:hover {
+            font-weight: bold;
+        }
+    }
+    
+}
+
+#menu-top-bar {
+
+    & li {
+        display: inline;
+
+        &:not(:last-child) {
+            padding-right: rem(20);
+        }
+
+        &:last-child a {
+            font-weight: 700;
+        }
+    }
+
+    & li a {
+        color: $color-black;
+        font-size: rem(14);
+        font-weight: 500;
+
+        &:hover {
+            color: $color-purple;
+        }
+    }
+
+
+}
+
+#ast-hf-mobile-menu .menu-link {
+    font-weight: 500;
+}
+
+#menu-products-menu-one {
+
+    & a {
+        padding: 0;
+        padding-bottom: rem(6); 
+        font-size: rem(14);
+        line-height: 1.2rem;
+    }
+}
+.products-megaMenu {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 2rem;
+    padding: 1rem 2rem;
+}
+.ourBrands {
+    padding-right: 2rem;
+
+    & ul {
+        margin: 0;
+    }
+
+    & li {
+        line-height: 0;
+        padding-top: 0.6rem;
+        font-size: 14px;
+        font-weight: 700;
+
+        & a:hover {
+            font-weight: 700;
+        }
+    }
+}
+.primary__cat {
+    font-weight: 700;
+}
+
+.contact-menu .sub-menu {
+    width: 180px;
+}
+.about-menu .sub-menu {
+    width: 180px;
+}
+.ast-builder-menu-mobile .main-navigation .menu-item:hover > .menu-link {
+    color: $color-purple;
+}
+.ast-header-break-point .main-navigation .stack-on-mobile li {
+    line-height: 2rem;
+}
+.ast-builder-menu-mobile .main-navigation .menu-item:hover > .ast-menu-toggle {
+    color: $color-purple;
+}
+.ast-header-break-point .main-header-bar {
+    border: none;
+}
+.ast-builder-menu-1 .menu-item:hover > .menu-link {
+    color: $color-purple;
+}

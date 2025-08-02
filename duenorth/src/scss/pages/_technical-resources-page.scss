@@ -1,0 +1,65 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the solutions child pages.
+// -----------------------------------------------------------------------------
+
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+
+
+.techResources {
+
+    margin-bottom: 2rem;
+
+    & .banner__section {
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: $color-white;
+        padding: 4rem 2rem;
+        align-items: center;
+        
+        @include media('>=medium') {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0rem 5rem;
+            align-items: flex-start;
+            height: 21.875rem;
+        }
+
+        &-title {
+            color: $color-white;
+            font-weight: normal;
+            font-size: 4rem;
+            line-height: 4rem;
+            text-align: left;
+        }
+
+        & p {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 0;
+        }  
+    }
+
+    .intro {
+    
+
+        &__descriptions {
+            
+            & p {
+                text-align: center;
+            }
+
+        }
+    }
+
+    .title {
+        @include heading-title
+    }
+}
+
+
+

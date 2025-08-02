@@ -1,0 +1,85 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+
+@use '../abstracts/variables' as *;
+
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 100%;
+  font-family: $font-primary;
+}
+
+// li:hover {
+//   color: $color-purple;
+// }
+
+#page .site-content {
+  background-color: #FFFFFF;
+}
+
+.ast-container {
+  display: block !important;
+}
+
+.ast-plain-container.ast-no-sidebar #primary {
+  margin: 0px;
+}
+
+.page-template-default {
+
+  & .entry-header {
+    background-color: #462F86;
+    padding: 6rem 2rem;
+    margin-top: 1rem;
+    line-height: 0; 
+
+    & h1 {
+      margin: 0;
+      font-weight: normal;
+      font-size: 4rem;
+      color: white;
+    }
+  }
+
+  & h2 {
+    font-weight: normal;
+    color: $color-purple;
+  }
+
+  & .entry-content {
+      
+    & a {
+      color: $color-purple;
+      font-weight: 500;
+      text-decoration: none !important; 
+
+      &:hover {
+        text-decoration: underline !important;
+      }
+    }
+  }
+} 
+
+
+

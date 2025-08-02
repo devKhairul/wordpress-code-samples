@@ -1,0 +1,128 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the solutions child pages.
+// -----------------------------------------------------------------------------
+
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+
+
+.faqs {
+
+
+    margin-bottom: 2rem;
+
+    & .banner__section {
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: $color-white;
+        padding: 4rem 2rem;
+        align-items: center;
+        
+        @include media('>=medium') {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0rem 5rem;
+            align-items: flex-start;
+            height: 21.875rem;
+        }
+
+        &-title {
+            color: $color-white;
+            font-weight: normal;
+            font-size: 4rem;
+            line-height: 4rem;
+            text-align: left;
+        }
+
+        & p {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 0;
+        }  
+    }
+
+    .intro {
+    
+
+        &__descriptions {
+            
+            & p {
+                text-align: center;
+            }
+
+        }
+    }
+
+    &__section {
+
+       & .title {
+            @include heading-title;
+
+            text-align: center;
+       }
+    }
+
+    
+    /*-------------------------------------*/
+
+    .accordion__item {
+        margin: 5px auto;
+    }
+
+    .accordion__title-text {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: $color-black;
+
+    }
+    .accordion__item .accordion__title {
+        position: relative;
+        text-align: left;
+        padding: 2rem;
+        margin-bottom: 1rem;
+        background-color: $color-lightGrey;
+        
+        -webkit-transition: background-color 0.2s;
+        transition: background-color 0.2s;
+    cursor: pointer;
+    }
+    
+    .accordion__item .accordion-active {
+        background-color: $color-lightPurple;
+    }
+    .accordion__item .accordion__title .accordion__arrow {
+        position: absolute;
+        right: 1rem;
+        width: 2rem;
+        
+        -webkit-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+    }
+    .accordion__item .accordion__rotate {
+        transform: rotate(270deg);
+    }
+    .accordion__item .accordion__content {
+        text-align: left;
+        padding: 1.6rem 1rem;
+        margin-bottom: 2px;
+        font-size: 1rem;
+        display: none;
+    }
+
+    .accordion__item .accordion__content li {
+        padding-left: 0.6rem;
+        padding-bottom: 0.2rem;
+    }
+
+    .accordion__item .accordion__content li::marker {
+        content: url("/wp-content/uploads/2023/12/arrow-marker.png");
+    }
+        
+}
+
+
+

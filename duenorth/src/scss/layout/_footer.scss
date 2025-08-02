@@ -1,0 +1,285 @@
+// This file contains all styles related to the footer of the site
+
+@use "../abstracts/variables" as *;
+@import "../abstracts/breakpoints";
+@import "../abstracts/functions";
+
+.site-footer {
+    margin-top: 4rem;
+    border-top: 1px solid $color-lightGrey;
+
+    & .menu {
+        & li {
+            padding-bottom: rem(10);
+
+            &:first-child {
+                font-weight: 700;
+            }
+        }
+
+        & a {
+            color: $color-black;
+
+            &:hover {
+                color: $color-purple !important;
+            }
+        }
+    }
+
+    & a:hover {
+        color: $color-purple !important;
+    }
+
+    .site-primary-footer-wrap ul li {
+        list-style: none;
+    }
+}
+.footer-nav-wrap {
+    text-align: left;
+
+    & li {
+        padding: 0;
+    }
+}
+.footer-social-item {
+    padding: rem(10);
+    border-radius: 50%;
+    background-color: $color-darkGrey;
+
+    &:hover {
+        background-color: $color-purple;
+    }
+}
+
+.form__newsletter {
+    & .gfield-choice-input {
+        display: none !important;
+    }
+
+    & label {
+        font-size: rem(12) !important;
+        font-style: italic !important;
+    }
+
+    & input[type="email"] {
+        width: 75% !important;
+        border: 1px solid $color-darkGrey;
+        background: none;
+    }
+}
+
+.form__heading {
+    margin-top: 4rem;
+    font-size: rem(32);
+    color: $color-purple;
+    font-weight: 400;
+}
+
+.ast-footer-copyright {
+    font-size: rem(12);
+    color: $color-black;
+}
+
+.widget {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-logo {
+    width: rem(200);
+}
+
+.ast-scroll-top-icon {
+    background-color: $color-purple;
+    font-size: rem(12) !important;
+    border-radius: 50% !important;
+}
+
+#menu-footer-about {
+    & a:hover {
+        color: $color-purple;
+    }
+
+    & li:not(:first-child) {
+        font-size: rem(14);
+        padding: 0 0 rem(6) 0;
+
+        & a {
+            color: $color-black;
+        }
+    }
+}
+
+#menu-footer-products {
+    & a:hover {
+        color: $color-purple;
+    }
+
+    & li:not(:first-child) {
+        font-size: rem(14);
+        padding: 0 0 rem(6) 0;
+
+        & a {
+            color: $color-black;
+        }
+    }
+}
+
+#menu-footer-solutions {
+    & a:hover {
+        color: $color-purple;
+    }
+
+    & li:not(:first-child) {
+        font-size: rem(14);
+        padding: 0 0 rem(6) 0;
+
+        & a {
+            color: $color-black;
+        }
+    }
+}
+
+#menu-footer-innovations {
+    & a:hover {
+        color: $color-purple;
+    }
+
+    & li:not(:first-child) {
+        font-size: rem(14);
+        padding: 0 0 rem(6) 0;
+
+        & a {
+            color: $color-black;
+        }
+    }
+
+    // @include media(">medium") {
+    //     & li:last-child {
+    //         padding-top: rem(60);
+    //         font-weight: 700;
+    //     }
+    // }
+}
+
+
+#menu-footer-technical-resources {
+
+    margin-top: 1rem;
+   
+    & a:hover {
+        color: $color-purple;
+    }
+
+    & li:not(:first-child) {
+        font-size: rem(14);
+        padding: 0 0 rem(6) 0;
+
+        & a {
+            color: $color-black;
+        }
+    }
+
+    @include media(">medium") {
+
+        margin-top: 1rem;
+
+        & li:last-child {
+            padding-top: 1.6rem;
+            font-weight: 700;
+        }
+    }
+}
+
+
+
+#astra-footer-menu {
+    & a {
+        font-size: rem(14);
+        line-height: rem(14);
+        color: $color-black;
+    }
+
+    & li:not(:first-child) {
+        padding-left: rem(10);
+    }
+
+    & li:not(:last-child) {
+        border-right: 1px solid;
+        padding-right: rem(10);
+    }
+
+    & .menu-item > a {
+
+        @include media('<=small') {
+            padding: 0px;
+        }
+    }
+
+    @include media("<=x-small") {
+        display: inline-flex !important;
+    }
+
+    @include media(">x-small") {
+        display: inline-flex !important;
+    }
+
+    @include media(">medium") {
+        & li:not(:last-child) {
+            padding-right: 0;
+        }
+    }
+}
+
+
+
+@include media("<=x-small") {
+    .site-footer-primary-section-1 > *,
+    .site-footer-primary-section-2 > *,
+    .site-footer-primary-section-3 > *,
+    .site-footer-primary-section-4 > *,
+    .site-footer-primary-section-5 > * {
+        text-align: center !important;
+    }
+
+    .form__newsletter .gform_footer {
+        justify-content: center;
+    }
+    .footer-nav-wrap {
+        text-align: center;
+    }
+    .footer-nav-wrap li {
+        padding: 0;
+    }
+}
+
+@include media(">=medium") {
+    .ast-builder-grid-row-5-equal .ast-builder-grid-row {
+        grid-template-columns: 1fr 1fr 1fr 1fr !important;
+    }
+    .site-footer-primary-section-1 {
+        grid-column: span 4;
+    }
+}
+
+@include media(">=x-large") {
+    .form__text {
+        font-size: 0.875rem;
+        padding-right: rem(80);
+    }
+    .form__newsletter label {
+        padding-right: 1rem;
+    }
+    .ast-builder-grid-row-5-equal .ast-builder-grid-row {
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr !important;
+    }
+    .ast-builder-footer-grid-columns div:first-child {
+        grid-column: span 1;
+    }
+}
+
+
+#block-12 p {
+    font-size: 0.875rem;
+    padding-right: 6rem;
+}

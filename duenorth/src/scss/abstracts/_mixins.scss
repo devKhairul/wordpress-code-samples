@@ -1,0 +1,20 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+
+@mixin heading-title {
+    font-weight: 400;
+    color: $color-purple;
+    font-size: 2.5rem;
+    line-height: 3rem;
+}
+
+
+@mixin font-Montserrat {
+    font-family: "Montserrat", sans-serif;
+}
+
+@mixin font-Bebas {
+    font-family: "Bebas Neue", sans-serif;
+}

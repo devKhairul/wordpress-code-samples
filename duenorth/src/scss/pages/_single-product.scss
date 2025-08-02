@@ -1,0 +1,206 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the product categories archive
+// -----------------------------------------------------------------------------
+
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+
+
+.single__product {
+
+    .breadcrumb__link a {
+        color: $color-purple;
+        font-weight: 500;
+    }
+
+    &__tech-content img {
+        width: 60px;
+    }
+
+
+    &-main {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 4rem;
+    }
+
+    &__tech {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-column-gap: 1rem;
+        grid-row-gap: 2rem;
+    }
+
+    &__tech-content {
+        text-align: center;
+    }
+
+    &__tech-content h3 {
+        font-family: montserrat;
+        font-size: 1rem;
+        font-weight: normal;
+        padding-top: 1rem;
+    }
+
+    // &-lcol img {
+    //     width: 70%;
+    // }
+
+    &-lcol {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-details {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product__color-options {
+
+        // & img {
+        //     width: 100%;
+        // }
+
+        & ul {
+            margin: 0;
+            margin-top: 1rem;
+
+            & li {
+                display: inline-flex;
+                padding-right: 0.4rem;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        & h3 {
+            font-family: $font-primary;
+            font-size: 1.2rem;
+            color: $color-black; 
+        }
+
+    } 
+
+    .single__product {
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+
+           
+            & .brand-logo {
+                margin: 4rem 0 1rem 0;
+                width: 40%;
+            }
+        }
+
+        &-sku {
+            font-family: $font-primary;
+            color: $color-purple;   
+        }
+        
+        &-title {
+            font-family: $font-primary;
+            font-size: 1.2rem;
+            color: $color-black;
+            margin-bottom: 0.4rem;
+        }
+
+    }
+
+      
+    .product__download-buttons  {
+
+        & ul {
+            margin: 0;
+
+            & li {
+                list-style: none;
+                display: inline;
+
+                & a {
+                    background-color: #8F87C120;
+                    border: none;
+                    color: #404040;
+                    padding: 0.8rem 1rem;
+                    border-radius: 0.3rem;
+                    margin-right: 0.4rem;
+
+                    &:hover {
+                        background-color: $color-purple !important;
+                        color: $color-white;
+                    }
+
+                    &:last-child {
+                        background-color: #B9BCDF20;
+                    }
+                }
+            }
+        }
+    }
+
+    .product__accessories-link {
+        color: $color-purple;
+        font-weight: 500;
+    }
+
+    .contact {
+        text-align: center;
+
+        & > .title {
+            @include heading-title;
+        }
+    }  
+
+    table {
+        border: none;
+        background-color: #f4f4f4;
+        padding: 1rem;
+        border-radius: 1rem ;
+    }
+
+    td {
+        border-left: $color-white;
+        border-right: $color-white;
+    }
+    
+    th {
+        border: none;
+    }
+    
+    .product__color-options {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+
+        & table  {
+            & th {
+                text-align: left;
+            }
+
+            & td:last-child {
+                width: 0px;
+            }
+        }
+
+        & .merch-photo {
+
+            transition: all .2s ease-in-out;
+
+            &:hover {
+                cursor: zoom-in;
+                transform: scale(1.2);
+            }
+
+
+        }
+    }
+
+}
+
+
+

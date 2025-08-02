@@ -1,0 +1,141 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the about page
+// -----------------------------------------------------------------------------
+
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+
+
+
+.about {
+
+    & .banner__section {
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: $color-white;
+        padding: 4rem 2rem;
+        align-items: center;
+        
+        @include media('>=medium') {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0rem 5rem;
+            height: 24rem;
+            align-items: flex-start;
+        }
+
+        @include media('>=large') {
+            height: 37.5rem;
+        }
+
+        &-title {
+            color: $color-white;
+            font-weight: normal;
+            font-size: 4rem;
+            line-height: 4rem;
+        }
+
+        & p {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 0;
+        }  
+    }
+
+    &--intro {
+        text-align: center;
+
+        &-title {
+            @include heading-title;
+        }
+    }
+
+    & .solutions__type {
+        gap: 2rem;
+    }
+
+    .markets {
+
+        &__intro {
+            text-align: center;
+
+            & h2 {
+                @include heading-title;
+
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    .info__section {
+        text-align: center;
+    }
+
+    .products {
+
+        &__intro {
+
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+            gap: 2rem;
+
+            text-align: left;
+
+            & .card {
+                background-color: $color-lightGrey;
+                padding: 3rem;
+                border-radius: 1rem;
+            }
+            
+            
+            & h2 {
+                @include heading-title;
+
+                margin-bottom: 1rem;
+            }
+        }
+
+        & .products__box_3 {
+            margin-top: 4rem;
+
+            & h2 {
+                @include heading-title;
+
+                margin-bottom: 1rem;
+            }
+
+            & ul {
+
+                background-color: $color-lightGrey;
+                border-radius: 1rem;
+                text-align: left;
+                justify-items: center;
+                margin: 0;
+                padding: 4rem;
+
+                @include media('>=medium') {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr; 
+                    gap: 2rem;   
+                }
+
+                & li {
+                    padding-left: 1rem;
+                    padding-bottom: 1rem;
+
+                    &::marker {
+                        content: url("/wp-content/uploads/2023/12/arrow-marker.png");
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+

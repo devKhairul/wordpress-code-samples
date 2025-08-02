@@ -1,0 +1,226 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the partnership child pages
+// -----------------------------------------------------------------------------
+
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+
+
+
+.partnerships-child {
+
+    & .banner__section {
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: $color-white;
+        padding: 4rem 2rem;
+        align-items: center;
+        
+        @include media('>=medium') {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0rem 2rem;
+            height: 21.875rem;
+            align-items: flex-start;
+        }
+
+       
+        &-title {
+            color: $color-white;
+            font-weight: normal;
+            font-size: 4rem;
+            line-height: 4rem;
+        }
+
+        & p {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 0;
+        }  
+    }
+
+
+    &__intro {
+        
+        text-align: center;
+
+        &-title {
+            @include heading-title;
+        }
+
+        & p {
+            padding: 0 2rem;
+        }
+
+        & h2 {
+            @include heading-title;
+        }
+
+        & a {
+            color: $color-purple;
+            font-weight: 600;
+        }
+    }
+
+    &__highlighted {
+        background-color: $color-lightPurple;
+        padding: 2rem;
+        border-radius: 1rem;
+
+        & p {
+            color: $color-purple;
+            font-size: 1.2rem;
+            line-height: 1.4rem;
+            margin: 0;
+        }
+    }
+
+    &__type-block {
+
+        padding: 2rem;
+        margin-bottom: 2rem;
+
+        &:nth-child(even) {
+
+            .product__content {
+
+                &--photo {
+                    order: 2;
+                    display: grid;
+                    justify-content: center;
+                }
+            }
+        }
+
+        
+        @include media('>=medium') {
+        
+            padding: 4rem;
+        }
+
+        & p {
+            margin-bottom: 2rem;
+        }
+
+        
+        & h2 {
+            @include heading-title;
+        }
+    }
+
+    .product {
+
+        &__intro {
+            text-align: center;
+
+            & ul {
+                text-align: left;
+
+                @include media('>=medium') {
+                    margin-left: 20rem;
+                }
+            }
+
+            & li {
+                padding-left: 1rem;
+
+                &::marker {
+                    content: url("/wp-content/uploads/2023/12/arrow-marker.png");
+                }
+            }
+        }
+
+        &__content {
+            display: grid;
+            
+            gap: 2rem;
+            align-items: center;
+
+            @include media('>medium') {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            &--photo {
+                display: flex;
+                justify-content: center;
+            }
+
+            &--features {
+
+                & h2 {
+                    font-family: $font-primary;
+                    font-size: 1rem;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    color: $color-black;
+
+                }
+
+                & ul {
+                    margin-left: 1rem;
+                }
+
+                
+                & li {
+                    
+                    padding-left: 1rem;
+
+                    &::marker {
+                        content: url('/wp-content/uploads/2023/03/DN_Arrow10x10_v2.svg');
+                    }
+                }
+            }
+
+            &--feature-list {
+                    background-color: $color-lightGrey;
+                    padding: 3rem;
+                    border-radius: 1rem;
+
+                    @include media('>=large') {
+                        width: 75%;
+                    }
+
+                    & h2 {
+                        font-family: $font-primary;
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                        color: $color-black;
+                        text-align: center;
+                        margin-bottom: 1rem;
+                    }
+
+                    & ul {
+                        margin: 0;
+                    }
+
+                    & li {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        border-bottom: 1px solid $color-borderGrey ;
+                        list-style: none;
+                        margin: 0px;
+                        padding: 0.6rem 0;
+
+                        &:first-child {
+                            border-top: 1px solid $color-borderGrey ;
+                        }
+
+                        &::after {
+                            content: url('/wp-content/uploads/2023/07/bullet-after.png');
+                            padding-right: 2rem;
+                        }
+                    }
+
+                }
+
+        }
+
+    }
+
+}
+

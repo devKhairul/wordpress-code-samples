@@ -1,0 +1,275 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the careers page
+// -----------------------------------------------------------------------------
+
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+
+
+.careers {
+
+    & .banner__section {
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: $color-white;
+        padding: 4rem 2rem;
+        align-items: center;
+        
+        @include media('>=medium') {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0rem 5rem;
+            align-items: flex-start;
+            height: 21.875rem;
+        }
+
+        &-title {
+            color: $color-white;
+            font-weight: normal;
+            font-size: 4rem;
+            line-height: 4rem;
+            text-align: left;
+        }
+
+        & p {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 0;
+        }  
+    }
+
+    &__intro {
+        text-align: center;
+
+        &-title {
+            @include heading-title;
+        }
+
+        & p {
+            padding: 0 2rem;
+        }
+    }
+
+    .why__dn {
+
+        display: flex;
+        flex-direction: column;
+
+        &-row1 {
+            & h2 {
+                @include heading-title;
+                text-align: center;
+            }
+        }
+    
+        &-row2 {
+
+            @include media('>medium') {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+                align-items: center;
+            }
+
+            
+        }
+
+        &-creatives {
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+
+            @include media('>medium') {
+                display: flex;
+                flex-direction: column;
+            }
+            
+        }
+        &-contents {
+
+            margin-top: 2rem;
+
+            @include media('>medium') {
+                margin-top: 0;
+            }
+
+        }
+        &-block {
+            display: grid;
+            grid-template-columns: 8% 92%;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        &-icon img {
+
+            width: 90%;
+            padding-top: 0.2rem;
+
+            @include media('>=medium') {
+                width: 70%;
+            }
+        }
+        &-text span {
+            font-size: 1.2rem;
+        }
+        &-text p {
+            padding: 0.2rem 0 1rem 0rem;
+            margin: 0;
+        }
+    }
+
+    .emp__testimonials {
+        & .title {
+            @include heading-title;
+            text-align: center;
+        }
+    }
+
+    .testimonial__block {
+
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background-color: $color-lightPurple;
+        text-align: center;
+        width: 100%;
+        border-radius: 1rem;
+
+        @include media('>medium') {
+            width: 380px;
+        }
+
+        &-content {
+
+
+            padding: 0 2rem 2rem 2rem;
+
+            & h2 {
+                @include heading-title;
+                font-size: 2rem;
+            }
+
+            & h3 {
+                font-family: inherit;
+                font-size: 1rem;
+                font-weight: normal;
+                color: $color-purple;
+            }
+
+        }
+
+        &-photo {
+            width: 160px;
+            margin-top: -80px;
+            align-self: center;
+            margin-bottom: 1.6rem;
+        }
+
+        &-icon {
+            width: 40px;
+            align-self: center;
+            margin-bottom: 1.6rem;
+        }
+    }
+   
+    .job__postings {
+        // display: flex;
+        // flex-direction: column;
+        // background-color: #B9BCDF20;
+        padding: 2rem;
+        border-radius: 1rem;
+        text-align: center;
+
+        @include media('>=medium') {
+            padding: 4rem;
+        }
+
+        
+        & .title {
+            @include heading-title;
+        }
+
+        &-job {
+            // display: flex;
+            // flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+
+            @include media('>=medium') {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
+            
+
+            & .title {
+                font-family: inherit;
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    /*-------------------------------------*/
+
+    .accordion__item {
+        margin: 5px auto;
+    }
+
+    .accordion__title-text {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: $color-black;
+
+    }
+    .accordion__item .accordion__title {
+        position: relative;
+        text-align: left;
+        padding: 1rem 2rem;
+        margin-bottom: 1rem;
+        background-color: $color-lightGrey;
+        
+        -webkit-transition: background-color 0.2s;
+        transition: background-color 0.2s;
+    cursor: pointer;
+    }
+    
+    .accordion__item .accordion-active {
+        background-color: $color-lightPurple;
+    }
+    .accordion__item .accordion__title .accordion__arrow {
+        position: absolute;
+        right: 1rem;
+        width: 2rem;
+        
+        -webkit-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+    }
+    .accordion__item .accordion__rotate {
+        transform: rotate(270deg);
+    }
+    .accordion__item .accordion__content {
+        text-align: left;
+        padding: 1.6rem 1rem;
+        margin-bottom: 2px;
+        font-size: 1rem;
+        display: none;
+    }
+
+    .accordion__item .accordion__content li {
+        padding-left: 0.6rem;
+        padding-bottom: 0.2rem;
+    }
+
+    .accordion__item .accordion__content li::marker {
+        content: url("/wp-content/uploads/2023/12/arrow-marker.png");
+    }
+}
+
+
+

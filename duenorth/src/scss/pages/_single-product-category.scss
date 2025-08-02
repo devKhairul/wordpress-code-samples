@@ -1,0 +1,170 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the product categories archive
+// -----------------------------------------------------------------------------
+
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+
+
+.product__category {
+
+    & .banner {
+
+        background: url("/wp-content/uploads/2023/12/01b-our-brands-masthead.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: $color-white;
+        padding: 4rem 2rem;
+        align-items: center;
+
+          @include media('>=medium') {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0rem 5rem;
+            align-items: flex-start;
+            height: 21.875rem;
+        }
+
+        & h1 {
+            color: $color-white;
+            font-weight: normal;
+            font-size: 4rem;
+            line-height: 4rem;
+            text-align: left;
+        }
+
+    }
+
+    #filters-form {
+
+      & .reset:hover {
+        cursor: pointer;
+      }
+
+      & ul {
+        margin: 0;
+      }
+
+      & li {
+        list-style: none;
+        gap: 1rem;
+        justify-content: left;
+        text-align: left;
+        margin: 0;
+      }
+
+    }
+  
+    .product {
+
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      
+      @include media('>=medium') {
+        display: grid;
+        grid-template-columns: 25% 75%;
+      }
+
+      
+
+        &__sku {
+          font-size: 14px;
+          font-weight: bold;
+          color: $color-purple;
+        }
+
+        &__meta {
+          margin-top: 1rem;
+        }
+  
+        &__title {
+          font-family: $font-primary;
+          font-size: 1rem;
+          font-weight: normal;
+          margin-top: 0rem;
+
+        &:hover {
+          color: $color-purple;
+        }
+      }
+  
+      &__categories {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        align-items: flex-start;
+        margin: 0 0 1rem 0;
+      }
+  
+      &__container {
+
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+        grid-column-gap: 2rem;
+        grid-row-gap: 2rem;
+        
+  
+        & article {
+          text-align: center;
+
+          & > img:hover {
+            transform: scale(1.02);
+            transition: transform cubic-bezier(0.4, 0, 0.2, 1) 0.3s, -webkit-transform cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+          }
+    
+        }
+  
+        & strong {
+          font-weight: normal;
+        }
+
+        & img {
+          width: 60%;
+        }
+      }
+  
+      &__filters {
+  
+          & h3 {
+            text-align: left;
+            font-weight: normal;
+            color: #462F86;
+            margin-bottom: 0.8rem;
+          }
+  
+          & input {
+            margin-right: 0.4rem;
+          }
+  
+          & label:hover {
+            color: $color-purple;
+            font-weight: 500;
+            cursor: pointer;
+          }
+  
+      }
+  
+      & .category__link {
+        font-size: 14px;
+        color: $color-black;
+  
+        &:hover {
+          color: $color-purple;
+          font-weight: 700;
+        }
+      }
+  
+      .active {
+        font-weight: bold;
+        color: $color-purple;
+        font-size: 1rem;
+      }
+    }
+}
+
+
+

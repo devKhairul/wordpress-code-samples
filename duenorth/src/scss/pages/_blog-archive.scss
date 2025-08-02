@@ -1,0 +1,139 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the blog archive
+// -----------------------------------------------------------------------------
+
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+
+
+.blog .site-content {
+    background: $color-white;
+}
+
+.blogs__archive .banner__section {
+
+    background: url('/wp-content/uploads/2023/12/blog-masthead-parent.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: $color-white;
+    padding: 4rem 2rem;
+    align-items: center;
+
+    @include media('>=medium') {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0rem 5rem;
+        align-items: flex-start;
+        height: 21.875rem;
+    }
+
+    & h1 {
+        color: $color-white;
+        font-weight: normal;
+        font-size: 4rem;
+    }
+
+    & p {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin: 0;
+    }
+    
+}
+
+.blog__posts {
+
+    margin: 4rem 0;
+
+    @include media('>=large') {
+        display: grid;
+        grid-template-columns: repeat( 3, 1fr );
+        grid-row-gap: 6rem;
+        grid-column-gap: 2rem;
+    }
+
+    & .latest {
+        @include media('>=medium') {
+            grid-column: span 3;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            
+            & h2 {
+                width: 70%;
+            }    
+
+            & .blog__thumbnail {
+                width: 70%;
+            }    
+
+        }
+    }
+
+  
+
+    & h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: $color-black;
+        padding: 0;
+
+        &:hover {
+            color: $color-purple;
+        }
+    }
+
+    & > article {
+
+        @include media('<=large') {
+            padding: 2rem 0;
+        }
+
+    }
+
+
+    &:not(:first-child) {
+        text-align: center;
+    }
+
+    & article:first-child {
+        text-align: left;
+    }
+
+    & .attachment-post-thumbnail {
+        height: 280px;
+        object-fit: cover;
+
+        @include media('>=large') {
+            height: 260px;
+        }
+    }
+    
+    
+}
+
+.blog__thumbnail img {
+    border-radius: 1rem;
+    transform: scale(1);
+    transition: transform cubic-bezier(0.4,0,0.2,1) .3s,-webkit-transform cubic-bezier(0.4,0,0.2,1) .3s;
+
+    &:hover {
+        transform: scale(1.02);
+        transition: transform cubic-bezier(0.4,0,0.2,1) .3s,-webkit-transform cubic-bezier(0.4,0,0.2,1) .3s;
+    }
+}
+
+.blog__meta {
+    text-align: center;
+
+    @include media('>medium') {
+        text-align: left;
+    }
+
+    & > * {
+        padding: 0.8rem 0;
+    }
+}

@@ -1,0 +1,34 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the pagination component.
+// -----------------------------------------------------------------------------
+
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+.page-numbers {
+    @include font-Montserrat;
+
+    font-size: 1rem;
+    color: $color-purple;
+    margin: 0 0.2rem;
+    font-weight: 500;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+.current {
+    background-color: $color-purple;
+    color: $color-white;
+    font-weight: bold;  
+    padding: 0.4rem 0.8rem;
+    border: 2px solid $color-purple;
+    // border-radius: 50%;
+}
+.next, .prev  {
+    display: none;
+}

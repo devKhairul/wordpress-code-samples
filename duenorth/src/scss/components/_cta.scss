@@ -1,0 +1,18 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the CTA component.
+// -----------------------------------------------------------------------------
+
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+
+.cta {
+    text-align: center;
+    background-color: #b9bcdf20;
+    padding: 3rem;
+    border-radius: 1rem;
+
+    &__title .title {
+        @include heading-title;
+    }
+}

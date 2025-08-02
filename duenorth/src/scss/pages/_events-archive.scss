@@ -1,0 +1,141 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the events archive
+// -----------------------------------------------------------------------------
+
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+
+
+.post-type-archive-events .site-content {
+    background-color: $color-white;
+}
+
+.events {
+
+    &__banner__section {
+
+        background: url('/wp-content/uploads/2023/12/01e-events-masthead.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: $color-white;
+        padding: 4rem 2rem;
+        align-items: center;
+
+        @include media('>=medium') {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0rem 5rem;
+            align-items: flex-start;
+            height: 21.875rem;
+        }
+
+        & h1 {
+            color: $color-white;
+            font-weight: normal;
+            font-size: 4rem;
+        }
+
+        & p {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+    }
+
+    &__intro {
+        text-align: center;
+
+        & h2 {
+            font-size: 3rem;
+            font-weight: normal;
+            color: $color-purple;
+        }
+    }
+
+    &__posts {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        
+        & h2 {
+            @include font-Montserrat;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: $color-black;
+            padding: 0;
+        }   
+    }
+
+    &__content {
+
+        @include media('>=medium') {
+            display: grid;
+            grid-template-columns: 20% 80%;
+            gap: 3rem;
+        }
+
+        @include media('>=large') {
+            display: grid;
+            grid-template-columns: 10% 80%;
+            gap: 3rem;
+        }
+        
+    }
+
+    &__details {
+
+        text-align: center;
+
+        @include media('>=medium') {
+            text-align: left;
+        }
+
+        & .title {
+            @include font-Montserrat;
+            
+            color: $color-purple;
+            font-weight: bold;
+            font-size: 1.2rem;
+            padding-bottom: 0.2rem;
+            
+        }
+
+        & h3 {
+            @include font-Montserrat;
+
+            color: $color-black;
+            font-size: 1rem;  
+            text-transform: uppercase; 
+            padding: 0.6rem 4rem;
+
+            @include media('>=medium') {
+                padding: 0;
+            }
+        }
+
+    }
+
+    &__date {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+        height: 8rem;
+        justify-content: center;
+        background-color: $color-slightDarkPurple;
+        border-radius: 1rem;
+        color: $color-purple;
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+        
+        margin-bottom: 1rem;
+
+        &--month {
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+    }
+}

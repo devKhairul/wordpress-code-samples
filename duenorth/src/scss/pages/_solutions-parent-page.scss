@@ -1,0 +1,101 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the solutions parent page
+// -----------------------------------------------------------------------------
+
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+
+
+
+.solutions {
+
+    & .banner__section {
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: $color-white;
+        padding: 2rem;
+        align-items: center;
+        
+        @include media('>=medium') {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0rem 5rem;
+            height: 24rem;
+            align-items: flex-start;
+        }
+
+        @include media('>=large') {
+            height: 37.5rem;
+        }
+
+        &-title {
+            color: $color-white;
+            font-weight: normal;
+            font-size: 4rem;
+            line-height: 4rem;
+        }
+
+        & p {
+            font-size: 1.4rem;
+            font-weight: 600;
+        }  
+    }
+
+    &__intro-title {
+        @include heading-title;
+
+        margin-bottom: 1rem;
+    }
+
+    &__blocks {
+
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        
+        @include media('>=medium') {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+
+        & a {
+            color: $color-black;
+            font-weight: bold;
+            border-bottom: 2px solid $color-black;
+            padding-bottom: 0.8rem;
+
+            &:hover {
+                color: $color-purple;
+                border-bottom: 2px solid $color-purple;
+            }
+        }
+    }
+
+   
+
+    &__type-block {
+        background-color: $color-lightGrey;
+        padding: 4rem 0;
+
+        & img {
+            height: 140px;
+        }
+        
+        & h2 {
+            font-family: inherit;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+    }
+
+}
+
+
+
+

@@ -1,0 +1,117 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the solutions child pages.
+// -----------------------------------------------------------------------------
+
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+
+
+.brands {
+
+    margin-bottom: 2rem;
+
+    & .banner__section {
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: $color-white;
+        padding: 4rem 2rem;
+        align-items: center;
+        
+        @include media('>=medium') {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0rem 5rem;
+            align-items: flex-start;
+            height: 21.875rem;
+        }
+
+        &-title {
+            color: $color-white;
+            font-weight: normal;
+            font-size: 4rem;
+            line-height: 4rem;
+            text-align: left;
+        }
+
+        & p {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 0;
+        }  
+    }
+
+    .intro {
+    
+
+        &__descriptions {
+            
+            & p {
+                text-align: center;
+            }
+
+        }
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(25rem, 1fr) );
+        gap: 2rem;
+
+    }
+
+    &__row {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        
+        background-color: $color-lightGrey;
+        border-radius: 1rem;
+        padding: 3rem;
+
+        @include media('>=medium') {
+            margin: 3rem 0 0 0;
+        }
+        
+        & .brand-logo {
+            width: 15rem;
+            height: 4rem;
+        }
+
+        & .brand-image {
+            width: 26rem;
+        }
+        
+        &-content {
+            text-align: left;
+
+            & ul {
+                margin: 0;
+                margin-left: 1rem;
+            }
+            
+            & li {
+
+                padding-left: 1rem;
+
+                &::marker {
+                    content: url("/wp-content/uploads/2023/03/DN_Arrow10x10_v2.svg");
+                }
+
+                &:not(:last-child) {
+                    padding-bottom: 0.6rem;
+                }
+            }
+
+        }
+          
+      }
+}
+
+
+

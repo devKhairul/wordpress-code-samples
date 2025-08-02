@@ -1,0 +1,97 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the locations page.
+// -----------------------------------------------------------------------------
+
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+
+
+.locations {
+
+    & .banner__section {
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: $color-white;
+        padding: 4rem 2rem;
+        align-items: center;
+        
+        @include media('>=medium') {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0rem 5rem;
+            align-items: flex-start;
+            height: 21.875rem;
+        }
+
+        &-title {
+            color: $color-white;
+            font-weight: normal;
+            font-size: 4rem;
+            line-height: 4rem;
+            text-align: left;
+        }
+
+        & p {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 0;
+        }  
+    }
+
+    .intro {
+    
+        &__descriptions p {
+            text-align: center;
+        }
+
+    }
+
+    .contact__intro h2 {
+        @include heading-title;
+
+    }
+}
+
+.locations__map {
+
+    @include media('>=medium') {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    & p {
+        border-bottom: 1px solid $color-lightGrey;
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
+        line-height: 1.6rem;
+    }
+
+    & a {
+        color: $color-purple;
+        font-weight: 500;
+        font-size: 0.8rem;
+
+        &:hover {
+            font-weight: bold;
+        }
+    }
+}
+
+.addresses {
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0px;
+
+    @include media('>=medium') {
+        display: flex;
+        flex-direction: column;
+        padding: 0 4rem;
+    }
+}
+
+

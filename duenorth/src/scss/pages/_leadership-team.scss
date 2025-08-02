@@ -1,0 +1,105 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the leadership team page
+// -----------------------------------------------------------------------------
+
+@import '../abstracts/variables';
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+@import "../abstracts/functions";
+
+
+.leadership {
+
+  & .banner__section {
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: $color-white;
+    padding: 4rem 2rem;
+    align-items: center;
+    
+    @include media('>=medium') {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0rem 5rem;
+        align-items: flex-start;
+        height: 21.875rem;
+    }
+
+    &-title {
+        color: $color-white;
+        font-weight: normal;
+        font-size: 4rem;
+        line-height: 4rem;
+        text-align: left;
+    }
+  }
+
+
+  .leadership__intro {
+    text-align: center; 
+  
+    & .title {
+      @include heading-title;
+    }
+  }
+  
+  .leadership__item {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    // margin-left: calc(-50vw + 50%); 
+    // margin-right: calc(-50vw + 50%);
+  
+    @include media('>=medium') {
+      display: grid;
+      grid-template-columns: 20% 80%;
+      gap: 3rem;
+      padding: 7%;
+    }
+  
+    &:nth-of-type(odd) {
+      background: #B9BCDF30;
+      // padding: 3% 19%; 
+    }
+  }
+  
+  .member__details {
+    text-align: center;
+  
+    & h2 {
+      color: $color-purple;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+  
+    & h3 {
+      font-family: inherit;
+      font-weight: normal;
+      font-size: rem(14);
+      color: $color-black;
+      padding-bottom: 0.6rem;
+    }
+  
+    & .member__photo {
+      border-radius: 1rem;
+    }
+  }
+  
+  .member__bio h2  {
+      color: $color-purple;
+      font-weight: normal;
+  
+      @include media('<=small') {
+        padding-top: 2rem;
+      }
+  }
+  
+  .linkedin:hover {
+    transition: transform 300ms ease-in-out;
+    transform: scale(1.2);
+  }
+}

@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+// 1. Configuration and helpers
+@use 'abstracts/functions';
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+
+
+// 2. Vendors
+// NOT APPLICABLE FOR THIS PROJECT
+
+// 3. Base stuff
+@use 'base/base';
+@use 'base/fonts';
+@use 'base/typography';
+@use 'base/helpers';
+
+
+// 4. Layout-related sections
+@use 'layout/header';
+@use 'layout/footer';
+
+
+// 5. Components
+@use 'components/button';
+@use 'components/forms';
+@use 'components/cta';
+@use 'components/pagination';
+@use 'components/sales-specialist';
+
+
+// 6. Page-specific styles
+@use 'pages/front-page';
+@use 'pages/locations-page';
+@use 'pages/leadership-team';
+@use 'pages/contact-pages';
+@use 'pages/solutions-pages';
+@use 'pages/solutions-parent-page';
+@use 'pages/innovations-parent-page';
+@use 'pages/innovations-child-page';
+@use 'pages/partnerships-child-page';
+@use 'pages/careers-page';
+@use 'pages/custom-merchandisers';
+@use 'pages/about-page';
+@use 'pages/brands-page';
+@use 'pages/accessories-page';
+@use 'pages/manuals-page';
+@use 'pages/faqs-page';
+@use 'pages/technical-resources-page';
+
+@use 'pages/blog-single';
+@use 'pages/events-archive';
+@use 'pages/news-archive';
+@use 'pages/blog-archive';
+@use 'pages/products-parent';
+@use 'pages/single-product-category';
+@use 'pages/single-product';
+
+// 7. Themes
+// NOT APPLICABLE FOR THIS PROJECT

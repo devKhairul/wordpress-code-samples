@@ -1,0 +1,124 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the innovations parent page
+// -----------------------------------------------------------------------------
+
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+
+
+
+.innovations {
+
+    & .banner__section {
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: $color-white;
+        padding: 4rem 2rem;
+        align-items: center;
+        
+        @include media('>=medium') {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0rem 5rem;
+            height: 24rem;
+            align-items: flex-start;
+        }
+
+        @include media('>=large') {
+            height: 37.5rem;
+        }
+
+        &-title {
+            color: $color-white;
+            font-weight: normal;
+            font-size: 4rem;
+            line-height: 4rem;
+        }
+
+        & p {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 0;
+        }  
+    }
+
+
+    &__intro {
+        
+        text-align: center;
+
+        &-title {
+            @include heading-title;
+
+            margin-bottom: 1rem;
+        }
+
+        & p {
+            padding: 0 2rem;
+        }
+    }
+
+    &__type-block {
+
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem;
+        margin-bottom: 2rem;
+
+        @include media('>=medium') {
+            flex-direction: row;
+            padding: 4rem;
+            margin-bottom: 4rem;
+
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+            }
+        }
+
+        &:nth-child(odd) {
+            background-color: $color-lightGrey;
+        }
+
+        & h2 {
+            @include heading-title;
+
+            margin-bottom: 1rem;
+        }
+
+       & .block__content {
+            width: 100%;
+
+            @include media('>=medium') {
+                width: 50%;
+            }
+
+            & p {
+                margin-bottom: 3rem;
+            }
+        }
+
+        & .block__photo {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            @include media('>=medium') {
+                width: 50%;
+            }
+        }
+
+    }
+
+    
+
+}
+
+
+
+
