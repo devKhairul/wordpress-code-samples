@@ -1,0 +1,30 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.main-navigation {
+    #ast-hf-menu-1 {
+        gap: 2rem;
+    }
+    .menu-link {
+        font-family: $gibson-semibold, sans-serif;
+        color: $clr-white !important;
+
+        &:hover {
+            color: $clr-darkOrange !important;
+        }
+    }
+
+    .current_page_item {
+        a {
+            color: $clr-darkOrange !important;
+        }
+    }
+}
+
+.ast-mobile-popup-inner {
+  height: 30rem;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  top: 5.5rem !important;
+}

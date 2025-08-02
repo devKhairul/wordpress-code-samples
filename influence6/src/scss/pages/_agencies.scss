@@ -1,0 +1,164 @@
+
+.agencies {
+
+     .hero {
+        &__content {
+            h1 {
+                @include media('>=md') {
+                    width: 30rem;
+                }
+            }            
+        }
+        
+        p {
+            font-size: 1.5rem;
+            line-height: 1.25;
+        }
+
+        a {
+            @include button-style($bg: $clr-darkPurple, $text: $clr-white, $hover-bg: $clr-lightPurple);
+        }
+    }
+
+    .we-build-brand {
+        &__card {
+            h3 {
+                color: $clr-darkPurple;
+            }
+
+             @include media('>=md') {
+                h2.first {
+                    width: 18rem;
+                }
+
+                h2.second {
+                    width: 18rem;
+                }
+
+                h2.third {
+                    width: 18.5rem;
+                }
+            }
+        }
+
+        &__footer {
+            a {
+                @include button-style($bg: $clr-darkPurple, $hover-bg: $clr-lightPurple, $text: $clr-white);
+            }
+        }
+    }
+
+    .cta {
+
+        &__wrapper {
+            p {
+                @include media('>=md') {
+                    width: 35rem;
+                }
+            
+            }
+        }
+
+        a {
+            @include button-style($bg: $clr-darkPurple, $hover-bg: $clr-lightPurple, $text: $clr-white);
+        }
+    }
+    
+    .brands {
+        background-color: $clr-darkBg;
+        padding: 4rem 0;
+        
+        
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        &__header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+
+            h2 {
+                font-size: 2.25rem;
+                line-height: 1.2;
+                text-align: center;
+                color: $clr-white;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.25;
+                color: $clr-white;
+                text-align: center;
+            }
+        }
+
+        &__image {
+            position: relative;
+
+            &::before {
+                content: url('/wp-content/uploads/2025/07/redacted-tag-1.png');
+                position: absolute;
+                top: 5rem;
+                left: 31rem;
+                z-index: 1;
+                opacity: 0;
+                transition: opacity 0.3s ease-in;
+            }
+
+            &:hover::before {
+                opacity: 1;
+            }
+        }
+    }
+
+    .testimonials {
+        .slide-logo__wrapper {
+            &::before {
+                content: url('/wp-content/uploads/2025/07/redacted-tag-1.png');
+                position: absolute;
+                top: 1rem;
+                left: -3rem;
+                z-index: 1;
+                opacity: 0;
+                transition: opacity 0.3s ease-in;
+            }
+
+            &:hover::before {
+                opacity: 1;
+            }
+        }
+        .slide-logo {
+            filter: blur(10px);
+        }
+
+        .slide-author__wrapper {
+            position: relative;
+            margin-top: 3rem;
+
+            &::before {
+                content: url('/wp-content/uploads/2025/07/redacted-tag-2.png');
+                position: absolute;
+                top: -2rem;
+                left: 18rem;
+                z-index: 1;
+                opacity: 0;
+                transition: opacity 0.3s ease-in;
+            }
+
+            &:hover::before {
+                opacity: 1;
+            }
+        }
+        .slide-author {
+            filter: blur(10px);
+        }
+        .swiper-pagination-bullet {
+            background-color: $clr-darkPurple;
+        }
+    }
+}

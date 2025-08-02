@@ -1,0 +1,88 @@
+.testimonials {
+    background-color: $clr-darkBg !important;
+    background: url('/wp-content/uploads/2025/07/creator-bg-gradient.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 34%;
+    border-bottom-left-radius: 4rem;
+    padding: 2rem 0 8rem 0;
+
+    @include media('>lg') {
+        border-bottom-left-radius: 20rem;
+    }   
+
+    .swiper-wrapper {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        padding-top: 3rem;
+    }
+    .swiper-pagination {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin-top: 3rem;
+    }
+
+    .swiper-pagination-bullet {
+        width: 0.75rem;
+        height: 0.75rem;
+        background-color: $clr-lightOrange;
+    }
+
+    .slide-logo__wrapper {
+        position: relative;
+        width: 10rem;
+    }
+
+    .slide-logo {
+        width: 100%;
+    }
+
+    .slide-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        h2 {
+            font-family: 'Gibson', sans-serif;
+            font-weight: 500;
+            font-size: 2rem;
+            line-height: 1.2;
+            color: $clr-white;
+        }
+
+        p {
+            font-size: 1.5rem;
+            font-weight: 300;
+            line-height: 1.25;
+            color: $clr-white;
+            
+            @include media('>=md') {
+                width: 55rem;
+            }
+        }
+    }
+    
+    .slide-author__wrapper {
+
+        p {
+            font-family: 'Gibson', sans-serif;
+            font-size: 1rem;
+            color: $clr-white;
+            font-weight: 400;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+    }
+}

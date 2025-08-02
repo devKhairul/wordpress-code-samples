@@ -1,0 +1,269 @@
+
+.front-page {
+
+    .hero {
+        &__content {
+            h1 {
+                @include media('>lg') {
+                    width: 30rem;
+                }
+            }
+
+            p {
+                font-size: 1.5rem;
+                line-height: 1.25;
+
+                @include media('>lg') {
+                    width: 34rem;
+                }
+            }
+
+            a {
+                @include button-style($bg: $clr-white, $text: $clr-purple, $hover-bg: $clr-darkPurple, $hover-text: $clr-white);
+            }
+        }
+    }
+
+    .about {
+
+        &__wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-items: center;
+
+            @include media('>=md') {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @include media('>=lg') {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        &__card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 4rem;
+            border-radius: 1.175rem;
+            background: rgba(255, 255, 255, 0.05);
+
+            @include media('>md') {
+                min-height: 40rem;
+            }
+
+            @include media('>=lg') {
+                min-height: 32rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+                line-height: 1.2;
+                color: $clr-white;
+            }
+
+            h3 {
+                font-family: 'Gibson', sans-serif;
+                font-weight: 500;
+                color: $clr-white;
+                font-size: 1.25rem;
+                line-height: 1.2;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.25;
+                color: $clr-white;
+            }
+
+            a.about__button {
+                margin-top: auto; // Pushes the button to the bottom
+            }
+
+            &:nth-child(1) {
+                a {
+                    @include button-style($bg: $clr-lightOrange, $text: $clr-white, $hover-bg: $clr-darkOrange, $hover-text: $clr-white);
+                }
+            }
+            &:nth-child(2) {
+                a {
+                    @include button-style($bg: $clr-darkYellow, $text: $clr-white, $hover-bg: $clr-lightYellow, $hover-text: $clr-white);
+                }
+            }
+            &:nth-child(3) {
+                a {
+                    @include button-style($bg: $clr-darkPurple, $text: $clr-white, $hover-bg: $clr-lightPurple, $hover-text: $clr-white);
+                }
+            }
+        }
+
+    }
+
+    .our-difference {
+        background-color: $clr-darkBg;
+        padding-bottom: 6rem;
+        
+        &__wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-items: center;
+
+            @include media('>=md') {
+                grid-template-columns: 1fr 1fr;
+                gap: 0;
+            }
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+
+            h2 {
+                font-size: 2rem;
+                line-height: 1.2;
+                color: $clr-white;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+                line-height: 1.2;
+                color: $clr-white;
+                
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.25;
+                color: $clr-white;
+
+                @include media('>lg') {
+                    width: 30rem;
+                }
+            }
+
+            a {
+                margin-top: 1rem;
+                @include button-style($bg: $clr-white, $text: $clr-purple, $hover-bg: $clr-darkOrange, $hover-text: $clr-white);
+            }
+        }
+    }
+
+    .brands {
+        background-color: $clr-darkBg;
+        padding-bottom: 4rem;       
+        
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            row-gap: 2rem;
+            background: $clr-white;
+            border-radius: 1.175rem;
+            padding: 2rem;
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+
+            h2 {
+                font-size: 2rem;
+                line-height: 1.2;
+                text-align: center;
+                color: $clr-purple;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.25;
+                color: $clr-purple;
+                text-align: center;
+            }
+        }
+
+        &__logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+
+            @include media('>lg') {
+                gap: 4rem;
+                row-gap: 2rem;
+            }
+
+            img {
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+
+    .collaborate {
+
+        background-color: $clr-darkBg;
+        padding-bottom: 6rem;
+
+        &__wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            
+            @include media('>=md') {
+                grid-template-columns: 1fr 1fr;
+                gap: 2;
+            }
+
+            @include media('>=lg') {
+                border-bottom: 1px solid $clr-darkOrange;
+            }
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+
+            h2 {
+                font-size: 2rem;
+                line-height: 1.2;
+                color: $clr-white;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+                line-height: 1.2;
+                color: $clr-white;
+                
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.25;
+                color: $clr-white;
+
+                @include media('>lg') {
+                    width: 30rem;
+                }
+            }
+
+            a {
+                margin-top: 1rem;
+                @include button-style($bg: $clr-white, $text: $clr-purple, $hover-bg: $clr-darkOrange, $hover-text: $clr-white);
+            }
+        }
+    }
+}

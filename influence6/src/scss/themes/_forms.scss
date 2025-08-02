@@ -1,0 +1,208 @@
+// CREATORS FORM
+
+/* 1. Remove native checkbox styling */
+#gform_2 input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none !important;
+  width: 1.15rem;
+  height: 1.15rem;
+  background-color: #0F1320 !important;
+  cursor: pointer;
+  position: relative;
+  margin: 0; /* Optional reset */
+}
+
+/* 2. Add custom style when checkbox is checked */
+#gform_2 input[type="checkbox"]:checked {
+  background-color: $clr-darkOrange !important;
+  border: 1px solid $clr-darkOrange !important;
+}
+
+/* 3. Optional custom tick (disabled by default, or style as needed) */
+#gform_2 input[type="checkbox"]::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent; /* Set to transparent unless needed */
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* 4. Hide Gravity Forms' checkmark */
+#gform_2 input[type="checkbox"]:checked::after {
+  content: none !important;
+}
+
+// BRANDS FORM
+
+/* 1. Remove native checkbox styling */
+#gform_1 input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none !important;
+  width: 1.15rem;
+  height: 1.15rem;
+  background-color: #0F1320 !important;
+  cursor: pointer;
+  position: relative;
+  margin: 0; /* Optional reset */
+}
+
+/* 2. Add custom style when checkbox is checked */
+#gform_1 input[type="checkbox"]:checked {
+  background-color: $clr-darkYellow !important;
+  border: 1px solid $clr-darkYellow !important;
+}
+
+/* 3. Optional custom tick (disabled by default, or style as needed) */
+#gform_1 input[type="checkbox"]::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent; /* Set to transparent unless needed */
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* 4. Hide Gravity Forms' checkmark */
+#gform_1 input[type="checkbox"]:checked::after {
+  content: none !important;
+}
+
+/* 1. Remove default radio styling */
+#gform_1 input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none !important;
+  width: 1.15rem;
+  height: 1.15rem;
+  border-radius: 50% !important; /* Make it round */
+  background-color: #0F1320 !important;
+  cursor: pointer;
+  position: relative;
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* 2. Custom style when radio is selected */
+#gform_1 input[type="radio"]:checked {
+  background-color: $clr-darkYellow !important;
+  border: 1px solid $clr-darkYellow !important;
+}
+
+/* 3. Optional inner dot indicator (custom "tick") */
+#gform_1 input[type="radio"]::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: $clr-darkYellow;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 2;
+}
+
+/* Show dot when checked */
+#gform_1 input[type="radio"]:checked::before {
+  opacity: 1;
+}
+
+/* Hide native Gravity Forms radio checkmarks if any */
+#gform_1 input[type="radio"]:checked::after {
+  content: none !important;
+}
+
+
+// AGENCIES FORM
+
+/* 1. Remove native checkbox styling */
+#gform_4 input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none !important;
+  width: 1.15rem;
+  height: 1.15rem;
+  background-color: #0F1320 !important;
+  cursor: pointer;
+  position: relative;
+  margin: 0; /* Optional reset */
+}
+
+/* 2. Add custom style when checkbox is checked */
+#gform_4 input[type="checkbox"]:checked {
+  background-color: $clr-darkPurple !important;
+  border: 1px solid $clr-darkPurple !important;
+}
+
+/* 3. Optional custom tick (disabled by default, or style as needed) */
+#gform_4 input[type="checkbox"]::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent; /* Set to transparent unless needed */
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* 4. Hide Gravity Forms' checkmark */
+#gform_4 input[type="checkbox"]:checked::after {
+  content: none !important;
+}
+
+/* 1. Remove default radio styling */
+#gform_4 input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none !important;
+  width: 1.15rem;
+  height: 1.15rem;
+  border-radius: 50% !important; /* Make it round */
+  background-color: #0F1320 !important;
+  cursor: pointer;
+  position: relative;
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* 2. Custom style when radio is selected */
+#gform_4 input[type="radio"]:checked {
+  background-color: $clr-darkPurple !important;
+  border: 1px solid $clr-darkPurple !important;
+}
+
+/* 3. Optional inner dot indicator (custom "tick") */
+#gform_4 input[type="radio"]::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: $clr-darkPurple;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 2;
+}
+
+/* Show dot when checked */
+#gform_4 input[type="radio"]:checked::before {
+  opacity: 1;
+}
+
+/* Hide native Gravity Forms radio checkmarks if any */
+#gform_4 input[type="radio"]:checked::after {
+  content: none !important;
+}

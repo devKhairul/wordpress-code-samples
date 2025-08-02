@@ -1,0 +1,78 @@
+
+.brands {
+    
+    .hero {
+        &__content {
+            h1 {
+                width: fit-content;
+            }
+        }
+
+        p {
+            font-size: 1.5rem;
+            line-height: 1.25;
+        }
+
+        a {
+            @include button-style($bg: $clr-darkYellow, $text: $clr-white, $hover-bg: $clr-lightYellow);
+        }
+    }
+    
+    .brands {
+        background-color: $clr-darkBg;
+        padding: 4rem 0;
+        
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        &__header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+
+            h2 {
+                font-size: 2.25rem;
+                line-height: 1.2;
+                text-align: center;
+                color: $clr-white;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.25;
+                color: $clr-white;
+                text-align: center;
+            }
+        }
+
+        &__logos {
+            row-gap: 2rem;
+            background: $clr-white;
+            border-radius: 1.875rem;
+            padding-bottom: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+
+            @include media('>lg') {
+                gap: 5rem;
+                row-gap: 2rem;
+            }
+
+            img {
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}

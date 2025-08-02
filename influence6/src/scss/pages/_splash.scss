@@ -1,0 +1,35 @@
+.splash-page {
+
+    .hero-bg {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cta {
+        background-color: unset;
+        background-image: unset;
+        width: 100%;
+        padding: 0;
+
+        &__wrapper {
+            gap: 1rem;
+
+            p {
+                
+                @include media('>=md') {
+                    width: 45rem;
+                }
+            }
+        }
+
+        strong {
+            font-weight: 600;
+        }
+        
+        a {
+            @include button-style($bg: $clr-white, $text: $clr-black, $hover-bg: $clr-lightOrange);
+        }
+    }
+}

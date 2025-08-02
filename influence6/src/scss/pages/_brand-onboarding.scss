@@ -1,0 +1,130 @@
+#gform_1 .gform_wrapper input[type="checkbox"]:checked {
+    background-color: $clr-darkYellow !important;
+    border: 1px solid $clr-darkYellow !important;
+}
+
+.brand-onboarding {
+
+    .hero-bg {
+        border-bottom-left-radius: 5rem;
+
+        @include media('>lg') {
+            border-bottom-left-radius: 20rem;
+        }
+    }
+
+    .form__wrapper {
+        margin: 4rem 0 10rem 0;
+        padding: 2rem;
+        border-radius: 30px;
+        background: rgba(255, 255, 255, 0.05);
+
+        @include media('>=md') {
+            padding: 4rem;
+        }
+
+        #gform_submit_button_1 {
+            font-family: 'Gibson', sans-serif !important;
+            font-size: 1rem !important;
+            font-weight: 600 !important;
+            background-color: $clr-darkYellow !important;
+            color: $clr-white !important;
+            border-color: $clr-darkYellow !important;
+            border-radius: 1rem !important;
+            width: 10rem !important;
+            // margin-top: 2rem !important; 
+
+            &:hover {
+                background-color: $clr-lightYellow !important;
+                border-color: $clr-lightYellow !important;
+            }
+        }
+
+        #input_1_10 {
+            width: 100%;
+        }
+
+        h1 {
+            font-family: $gibson-medium;
+            font-size: 2.25rem;
+            line-height: 1.25;
+            color: $clr-white;
+            margin-bottom: 3rem;
+        }
+
+        #gform_1 {
+            .ginput_container_multiselect {
+                border-radius: 1rem;
+                overflow: hidden;
+            }
+
+            .gf_page_steps {
+                margin-bottom: 5rem;
+
+                span {
+                    font-family: 'Gibson',sans-serif;
+                    color: $clr-white;
+                }
+            }
+
+            .gf_step_active {
+                span {
+                   color: $clr-lightYellow;
+                }
+
+                .gf_step_number {
+                    background-color: $clr-lightYellow;
+                    color: $clr-white;
+                    border-color: $clr-lightYellow;
+                }
+            }
+            
+            .gf_step_number {
+                font-family: 'Gibson', sans-serif;
+                color: $clr-white;
+                border-color: $clr-white;
+
+                &::after {
+                    background-color: $clr-darkOrange;
+                    border: 2px solid $clr-darkOrange
+                }
+            }
+            
+            .gf_step_completed > span {
+                color: $clr-darkOrange
+            }
+
+            .gform_previous_button, .gform_next_button {
+                width: 10rem;
+                border-radius: 1rem !important;
+                font-family: 'Gibson', sans-serif !important;
+                font-size: 1rem !important;
+                font-weight: 600 !important;
+                color: $clr-white;
+            }
+
+            .gform_next_button {
+                font-family: 'Gibson', sans-serif !important;
+                font-size: 1rem !important;
+                font-weight: 600 !important;
+                background-color: $clr-lightYellow !important;
+                color: $clr-white !important;
+                border-color: $clr-lightYellow !important;
+                border-radius: 1rem !important;
+                width: 10rem !important;
+
+                &:hover {
+                    background-color: $clr-lightOrange !important;
+                    border-color: $clr-lightOrange !important;
+                }
+            }
+
+            .gform-page-footer {
+                align-items: center;
+                margin: 0;
+                padding: 0;
+                margin-top: 4rem;
+            }
+        }
+    }
+}

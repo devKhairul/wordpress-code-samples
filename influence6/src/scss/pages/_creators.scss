@@ -1,0 +1,229 @@
+.creators {
+
+    .hero {
+
+        &__wrapper {
+            @include media('>=md') {
+                grid-template-columns: 1.5fr 1fr;
+            }
+        }
+
+        &__content {
+
+            h1 {
+                width: fit-content;
+            }
+
+            a {
+                @include button-style($bg: $clr-lightOrange, $text: $clr-white, $hover-bg: $clr-darkOrange, $hover-text: $clr-white);
+            }
+
+            p {
+                font-size: 1.5rem;
+                line-height: 1.25;
+                color: $clr-white;
+
+                @include media('>=lg') {
+                    width: 42rem;
+                }
+            }
+        }
+    }
+
+    .about {
+
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        align-items: center;
+        text-align: center;
+        padding-top: 4rem;
+
+        &__header {
+
+            display: grid;
+            gap: 1rem;
+
+            h2 {
+                font-size: 2rem;
+                line-height: 1.2;
+                color: $clr-white;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.25;
+                color: $clr-white;
+
+                @include media('>=md') {
+                    width: 58rem;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        &__wrapper {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            background-color: $clr-black;
+            border-radius: 1rem;
+        }
+
+        &__card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1rem;
+            
+            @include media('>=md') {
+                padding: 2rem 3rem;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.25;
+                color: $clr-white;
+            }
+
+            strong {
+                font-weight: 600;
+                font-size: 1.25rem;
+            }   
+        }
+
+        &__footer {
+            a {
+                @include button-style($bg: $clr-lightOrange, $text: $clr-white, $hover-bg: $clr-darkOrange, $hover-text: $clr-white);
+            }
+        }
+    }
+
+    .our-difference {
+        background-color: $clr-darkBg;
+        padding-bottom: 6rem;
+        
+        &__wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-items: center;
+
+            @include media('>=md') {
+                grid-template-columns: 1fr 1fr;
+                gap: 0;
+            }
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+
+            h2 {
+                font-size: 2rem;
+                line-height: 1.2;
+                color: $clr-white;
+
+                @include media('>=md') {
+                    width: 25rem;
+                }
+            }
+
+            h3 {
+                font-size: 1.5rem;
+                line-height: 1.2;
+                color: $clr-white;
+                
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.25;
+                color: $clr-white;
+
+                @include media('>md') {
+                    width: 31rem;
+                }
+            }
+
+            strong {
+                font-weight: 600;
+            }
+        }
+
+        &__image {
+            justify-self: end;
+        }
+    }
+
+    .refer {
+        background-color: $clr-darkBg;
+        padding-top: 10rem;
+
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            background-color: $clr-white;
+            border-radius: 1rem;
+            padding: 4rem;
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            
+
+            h2 {
+                font-size: 2rem;
+                line-height: 1.2;
+                color: $clr-purple;
+                text-align: center;
+
+                @include media('>=md') {
+                    width: 30rem;
+                }
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.25;
+                color: $clr-purple;
+                text-align: center;
+
+                @include media('>=md') {
+                    width: 50rem;
+                }
+            }
+
+            a {
+                @include button-style($bg: $clr-lightOrange, $text: $clr-white, $hover-bg: $clr-darkOrange, $hover-text: $clr-white);
+            }
+        }
+
+        &__image {
+           img {
+            width: 300px;
+            margin-top: -16rem;
+           }
+        }
+    }
+
+    .cta {
+        &__wrapper {
+            a {
+                @include button-style($bg: $clr-lightOrange, $text: $clr-white, $hover-bg: $clr-darkOrange, $hover-text: $clr-white);
+            }
+        }
+    }
+}

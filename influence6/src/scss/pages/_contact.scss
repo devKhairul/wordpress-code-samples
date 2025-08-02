@@ -1,0 +1,110 @@
+.contact {
+
+    .hero-bg {
+        
+        border-bottom-left-radius: 5rem;
+
+        @include media('>lg') {
+            border-bottom-left-radius: 20rem;
+        }
+    }
+
+    .hero {
+
+        margin-top: 4rem;
+        
+
+        &__wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            @include media('>=md') {
+                width: 38rem;
+                margin: 0 auto;
+            }
+            
+        }
+
+        &__content {
+            gap: 1rem;
+            text-align: center;
+            align-items: center;
+
+            h1 {
+                width: auto;
+            }
+
+            strong {
+                font-weight: 600;
+            }
+
+        }
+    }
+
+    .about {
+
+        &__wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-items: center;
+            margin-bottom: 10rem;
+
+            @include media('>=md') {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @include media('>=lg') {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        &__card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 4rem;
+            border-radius: 1.175rem;
+            background: rgba(255, 255, 255, 0.05);
+
+            @include media('>md') {
+                min-height: 20rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+                line-height: 1.2;
+                color: $clr-white;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.25;
+                color: $clr-white;
+            }
+
+            a.about__button {
+                margin-top: auto; // Pushes the button to the bottom
+            }
+
+            &:nth-child(1) {
+                a {
+                    @include button-style($bg: $clr-lightOrange, $text: $clr-white, $hover-bg: $clr-darkOrange, $hover-text: $clr-white);
+                }
+            }
+            &:nth-child(2) {
+                a {
+                    @include button-style($bg: $clr-darkYellow, $text: $clr-white, $hover-bg: $clr-lightYellow, $hover-text: $clr-white);
+                }
+            }
+            &:nth-child(3) {
+                a {
+                    @include button-style($bg: $clr-darkPurple, $text: $clr-white, $hover-bg: $clr-lightPurple, $hover-text: $clr-white);
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,111 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+
+
+footer {
+    li {
+        line-height: 1;
+        
+        &:first-child {
+            margin-bottom: 0.5rem;
+        }
+    }
+    
+    #menu-item-278 {
+        margin-bottom: 0.5rem;
+    }
+
+    .ast-builder-footer-grid-columns {        
+        @include media('>=lg') {
+            justify-items: end;
+        }
+    }
+
+    .ast-builder-grid-row {
+        grid-column-gap: 0.875rem;
+    }
+
+    .menu-link {
+        font-family: $gibson-medium, sans-serif !important; 
+        font-size: 0.875rem !important;
+        line-height: 1.25 !important;
+        color: $clr-purple;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $clr-darkOrange;
+        }
+        &:focus {
+            outline: 2px solid $clr-darkOrange;
+            outline-offset: 2px;
+        }
+        &:active {
+            color: $clr-darkOrange;
+        }
+    }
+
+    #menu-item-403 a, 
+    #menu-item-265 a, 
+    #menu-item-254 a, 
+    #menu-item-255 a,
+    #menu-item-278 a {
+        font-size: 1rem !important;
+    }
+
+    .ast-footer-copyright {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        font-family: $gibson-regular;
+        font-weight: 400;
+        font-size: 0.875rem;
+        line-height: 1.25;
+        color: $clr-purple;
+        text-align: center;
+
+        strong {
+            font-weight: 500;
+        }
+
+        a {
+            font-family: $gibson-medium;
+            color: $clr-purple;
+            text-decoration: none;
+
+            &:hover {
+                color: $clr-darkOrange;
+            }
+        }
+    }
+
+    .footer-social-inner-wrap {
+        display: flex;
+        justify-content: center;
+        
+        @include media('>=lg') {
+            justify-content: start;
+        }
+    }
+
+    #astra-footer-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+
+        a {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    .footer-widget-area {
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+    }
+}

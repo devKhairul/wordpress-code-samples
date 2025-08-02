@@ -1,0 +1,21 @@
+.not-found {
+ 
+    &__content {
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+            font-size: 3rem;
+            color: $clr-white;
+        }
+
+        h2 {
+            font-size: 5rem;
+            color: $clr-white;
+            font-weight: 900;
+        }
+    }
+}

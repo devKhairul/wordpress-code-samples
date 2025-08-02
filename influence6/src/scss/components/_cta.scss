@@ -1,0 +1,42 @@
+.cta {
+    background-color: $clr-darkBg;
+    padding: 4rem 0;
+    background-image: url('/wp-content/uploads/2025/07/bg-glow2.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50%;
+    
+
+    &__wrapper {           
+        background-color: rgba(0, 0, 0, 0.70);
+        border-radius: 1.875rem;
+        padding: 4rem 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+
+        h2 {
+                font-size: 2.25rem;
+                color: $clr-white;
+                text-align: center;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.25;
+                color: $clr-white;
+                text-align: center;
+
+                @include media('>=md') {
+                    width: 38rem;
+                    margin: 0 auto;
+                }
+            }
+        
+        a {
+            @include button-style($bg: $clr-darkYellow, $text: $clr-white, $hover-bg: $clr-lightYellow, $hover-text: $clr-white);
+
+        }
+    }
+}

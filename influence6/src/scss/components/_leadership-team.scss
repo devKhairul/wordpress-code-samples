@@ -1,0 +1,93 @@
+.leadership-team {
+    background-color: $clr-darkBg !important;
+    // background: url('/wp-content/uploads/2025/07/creator-bg-gradient.png') no-repeat center center;
+    background-size: cover;
+    background-position-y: 34%;
+    // padding-bottom: 4rem;
+    // border-bottom-left-radius: 4rem;
+
+    @include media('>lg') {
+        // border-bottom-left-radius: 20rem;
+        padding-top: 6rem;
+        // padding-bottom: 6rem;
+    }   
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        padding-bottom: 4rem;
+    }
+
+    &__content {
+        h2 {
+            font-size: 2rem;
+            line-height: 1.2;
+            color: $clr-white;
+            text-align: center;
+        }
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+
+        @include media('>=md') {
+            grid-template-columns: repeat(3, 1fr); 
+        }
+    }
+
+    &__footer {
+        a {
+            @include button-style($bg: $clr-white, $text: $clr-purple, $hover-bg: $clr-darkOrange, $hover-text: $clr-white);
+        }
+    }
+    
+    .leadership-card {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+
+        @include media('>lg') {
+            padding: 3rem 3rem 0 3rem;
+        }
+
+        img {
+            margin-bottom: 1rem;
+
+            &:hover ~ p {
+                display: block;
+            }
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            line-height: 1.2;
+            color: $clr-white;
+        }
+
+        h4 {
+            font-size: 0.875rem;
+            color: $clr-white;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.25;
+            color: $clr-white;
+            padding-bottom: 2rem;
+        }
+
+        // &__link {
+        //     display: flex;
+        //     gap: 0.5rem;
+        //     align-items: center;
+        //     margin-top: auto;
+
+        //     @include link-style($color: $clr-darkOrange, $hover-color: $clr-white);
+        // }
+    }
+}
