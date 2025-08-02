@@ -1,0 +1,41 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to buttons
+// -----------------------------------------------------------------------------
+
+.btn-link {
+  color: $clr-orange;
+  font-weight: $font-semibold;
+
+  &:hover {
+    color: $clr-navyblue;
+  }
+}
+
+.btn {
+  font-weight: $font-bold;
+  color: $clr-white;
+  background-color: $clr-orange;
+  padding: 0.5rem 2rem;
+  border-radius: 50px;
+
+  &:hover {
+    background-color: $clr-white;
+    color: $clr-orange;
+  }
+}
+
+.outlined-btn {
+  font-size: 0.875rem;
+  font-weight: $font-semibold;
+  background-color: transparent;
+  border: 2px solid $clr-orange;
+  color: $clr-black;
+  padding: 0.8rem 2.5rem;
+  border-radius: 0.5rem;
+  line-height: 1;
+
+  &:hover {
+    background-color: $clr-orange;
+    color: $clr-white;
+  }
+}

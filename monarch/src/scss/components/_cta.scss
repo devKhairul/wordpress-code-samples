@@ -1,0 +1,44 @@
+.cta {
+  margin-bottom: 4rem;
+  background-color: $clr-orange;
+  border-radius: 1rem;
+  padding: 2rem;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+
+  @include media(">=md") {
+    padding: 3rem;
+  }
+
+  &__content {
+    display: grid;
+    gap: 2rem;
+
+    &-text {
+      display: grid;
+      gap: 0.5rem;
+
+      h2 {
+        font-size: clamp(1.75rem, 5vw, 2.5rem);
+        color: $clr-white;
+      }
+
+      p {
+        color: $clr-white;
+      }
+    }
+
+    &-btn {
+      .outlined-btn {
+        border: 2px solid $clr-white;
+        color: $clr-white;
+
+        &:hover {
+          background-color: $clr-white;
+          color: $clr-black;
+        }
+      }
+    }
+  }
+}

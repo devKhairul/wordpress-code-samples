@@ -1,0 +1,246 @@
+.leadership {
+  .hero {
+    background-image: url("/wp-content/uploads/2024/12/bg-rect.png");
+
+    @include media(">=md") {
+      min-height: 14rem;
+    }
+
+    @include media(">=lg") {
+      min-height: 24rem;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      @include media(">=md") {
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+    }
+
+    &__content-img {
+      img {
+        @include media(">=md") {
+          width: 20rem;
+        }
+
+        @include media(">=lg") {
+          width: 30rem;
+        }
+
+        @include media(">=xl") {
+          width: 40rem;
+        }
+      }
+    }
+
+    &__content-title {
+      justify-content: flex-end;
+      margin: 1rem 0 2rem 0;
+
+      @include media(">=md") {
+        width: 25rem;
+        margin: 0;
+      }
+
+      @include media(">=lg") {
+        width: 28rem;
+      }
+
+      @include media(">=xl") {
+        width: 36rem;
+      }
+
+      h2 {
+        font-size: clamp(2rem, 5vw, 3rem);
+        color: $clr-white;
+        font-weight: $font-semibold;
+        padding-bottom: 1rem;
+        border-bottom: 3px solid $clr-orange;
+
+        @include media(">=md") {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .team {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 4rem;
+
+    &__content {
+      display: grid;
+      gap: 2rem;
+    }
+
+    &__content-rows {
+      display: grid;
+      gap: 3rem;
+
+      @include media(">xl") {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      &-member {
+        display: grid;
+        gap: 1rem;
+
+        &-info {
+          display: grid;
+          gap: 1rem;
+          justify-content: space-between;
+          align-items: center;
+          grid-template-columns: 4fr 1fr;
+        }
+
+        &-identity {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+
+          h3 {
+            font-size: 1.5rem;
+            font-weight: $font-semibold;
+          }
+
+          p {
+            font-size: 0.75rem;
+            font-weight: 500;
+            line-height: 1;
+            text-transform: uppercase;
+          }
+        }
+
+        &-socials {
+          justify-self: end;
+          border: 3px solid transparent;
+
+          &:hover {
+            border: 3px solid $clr-orange;
+            border-radius: 100%;
+          }
+        }
+
+        &-bio {
+          p {
+            margin-bottom: 1rem;
+          }
+
+          a {
+            color: $clr-orange;
+            font-weight: $font-semibold;
+
+            &:hover {
+              color: $clr-black;
+            }
+          }
+        }
+      }
+
+      &-video {
+        position: relative;
+        overflow: hidden;
+
+        iframe {
+          width: 100%;
+          height: 300px;
+          border-radius: 1rem;
+
+          @include media(">=md") {
+            height: 600px;
+          }
+
+          @include media(">lg") {
+            height: 350px;
+          }
+        }
+      }
+    }
+
+    &__content-rows:nth-child(even) {
+      .team__content-rows-video {
+        @include media(">xl") {
+          grid-area: 1 / 2;
+        }
+      }
+    }
+  }
+
+  .bdm {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 6rem;
+
+    h2 {
+      font-size: clamp(1.75rem, 5vw, 2.5rem);
+      line-height: 1.1;
+      font-weight: $font-semibold;
+      text-align: center;
+    }
+
+    &__grid {
+      display: grid;
+      gap: 2rem;
+
+      @include media(">=md") {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+      }
+
+      &-member {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        &-img {
+          img {
+            width: 100%;
+            border-radius: 1rem;
+
+            @include media(">=lg") {
+              width: 300px;
+              height: 300px;
+            }
+          }
+        }
+
+        &-info {
+          display: grid;
+          gap: 0rem;
+          justify-content: space-between;
+          align-items: center;
+          grid-template-columns: 4fr 1fr;
+        }
+
+        &-identity {
+          p {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+          }
+        }
+
+        &-social {
+          justify-self: end;
+          border: 3px solid transparent;
+
+          &:hover {
+            border: 3px solid $clr-orange;
+            border-radius: 100%;
+          }
+        }
+
+        &-bio {
+          p {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

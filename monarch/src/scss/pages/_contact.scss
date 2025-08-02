@@ -1,0 +1,55 @@
+.contact {
+  .hero {
+    min-height: 12.5rem;
+
+    &__content-title {
+      width: 20rem;
+      justify-content: flex-end;
+      border-bottom: 3px solid $clr-orange;
+
+      @include media(">md") {
+        width: 36rem;
+      }
+
+      h2 {
+        color: $clr-white;
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: $font-semibold;
+        padding-bottom: 1rem;
+      }
+    }
+  }
+
+  .form {
+    padding: 2rem 1rem;
+
+    @include media(">lg") {
+      padding: 4rem 0rem;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+      height: 4rem;
+      align-items: center;
+    }
+  }
+
+  .gform-footer {
+    margin-top: 3rem !important;
+  }
+
+  a {
+    &:hover {
+      color: $clr-black;
+      text-decoration: underline;
+    }
+
+    &:focus {
+      color: $clr-orange;
+    }
+  }
+}

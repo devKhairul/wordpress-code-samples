@@ -1,0 +1,16 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass functions.
+// -----------------------------------------------------------------------------
+
+
+// Convert px unit to rem unit
+// use as follows rem(16px) or rem(16)
+
+$html-font-size: 16;
+
+@function stripUnit($value) {
+    @return calc($value / ($value * 0 + 1))
+}
+@function rem($pxValue) {
+    @return #{calc(stripUnit($pxValue) / stripUnit($html-font-size))}rem;
+}

@@ -1,0 +1,304 @@
+.vet-practices {
+  .hero {
+    min-height: 12.5rem;
+    // align-items: center;
+    // justify-content: center;
+
+    @include media(">=md") {
+      justify-content: flex-end;
+      min-height: 18rem;
+    }
+
+    @include media(">lg") {
+      min-height: 24rem;
+    }
+
+    &__content {
+      @include media(">=md") {
+        display: flex;
+        text-align: left;
+      }
+    }
+
+    &__content-img {
+      img {
+        display: none;
+
+        @include media(">=md") {
+          display: block;
+          width: 15rem;
+          margin-left: 2rem;
+        }
+
+        @include media(">=lg") {
+          width: 20rem;
+          margin-left: 5rem;
+        }
+
+        @include media(">=xl") {
+          width: 28rem;
+        }
+      }
+    }
+
+    &__content-title {
+      width: 20rem;
+      justify-content: flex-end;
+
+      @include media(">=md") {
+        width: 25rem;
+      }
+
+      @include media(">=lg") {
+        width: 32rem;
+      }
+
+      @include media(">=xl") {
+        width: 40rem;
+      }
+
+      h2 {
+        font-size: clamp(2rem, 5vw, 3rem);
+        color: $clr-white;
+        font-weight: $font-semibold;
+        padding-bottom: 1rem;
+        border-bottom: 3px solid $clr-orange;
+
+        @include media(">=md") {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  &__intro {
+    margin: 2rem 0;
+    padding: 2rem;
+    background-color: $clr-orangeTransparent;
+    border-radius: 1rem;
+
+    @include media(">=lg") {
+      padding: 4rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+
+    @include media(">lg") {
+      width: 85%;
+      margin: 0 auto;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+
+  .vet__items {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+    gap: 2rem;
+
+    &-header {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+
+      h2 {
+        font-size: clamp(1.75rem, 5vw, 2.5rem);
+      }
+
+      p {
+        @include media(">=lg") {
+          width: 70%;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      @include media(">=lg") {
+        flex-direction: row;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+
+        @include media(">=lg") {
+          flex-direction: column;
+          gap: 0rem;
+        }
+
+        li {
+          text-decoration: underline;
+
+          @include media(">=lg") {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    &-post-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      h6 {
+        color: $clr-orange;
+        font-size: 2rem;
+      }
+    }
+
+    &-regions {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      border-right: 1px solid $clr-orangeTransparent;
+      padding-right: 2rem;
+
+      h3 {
+        color: $clr-orange;
+        font-weight: $font-bold;
+      }
+
+      ul {
+        margin: 0;
+
+        li {
+          list-style: none;
+
+          a {
+            color: $clr-black;
+            font-weight: $font-semibold;
+
+            &:hover {
+              color: $clr-orange;
+            }
+          }
+        }
+      }
+    }
+
+    h2 {
+      text-align: center;
+      font-size: clamp(1.75rem, 5vw, 2.5rem);
+    }
+
+    &-grid {
+      display: grid;
+      gap: 2rem;
+      border-bottom: 1px solid $clr-orangeTransparent;
+      padding-bottom: 3rem;
+
+      @include media(">lg") {
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 4rem;
+        grid-row-gap: 4rem;
+      }
+    }
+
+    &-post {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      h3 {
+        font-size: 1.5rem;
+        line-height: 1.25;
+      }
+
+      a {
+        &:hover {
+          color: $clr-grey;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &-post-status {
+      display: flex;
+
+      p {
+        font-size: 0.75rem;
+        align-self: start;
+        color: $clr-white;
+        border-radius: 2rem;
+        padding: 0.4rem 2rem;
+        font-weight: $font-semibold;
+        min-width: 10rem;
+        text-align: center;
+      }
+    }
+  }
+
+  .practice-inquiry {
+    background-color: $clr-orangeTransparent;
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+
+      @include media(">lg") {
+        width: 90%;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+      }
+
+      p {
+        @include media(">lg") {
+          width: 90%;
+        }
+      }
+
+      h2 {
+        font-size: clamp(1.75rem, 5vw, 2.5rem);
+      }
+    }
+
+    .form {
+      padding: 2rem 1rem;
+
+      @include media(">lg") {
+        padding: 0rem 0rem 4rem 0rem;
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      select,
+      textarea {
+        height: 4rem;
+        align-items: center;
+        border: none !important;
+      }
+
+      #field_2_14 {
+        margin-top: -2rem;
+      }
+
+      .gform-footer {
+        margin-top: 4rem;
+      }
+    }
+  }
+}

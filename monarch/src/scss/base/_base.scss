@@ -1,0 +1,219 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+
+@use "../base/typography" as *;
+@use "../abstracts/breakpoints" as *;
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+
+body {
+  font-family: $font-primary;
+}
+
+sup {
+  font-size: 60% !important;
+}
+
+.ast-separate-container,
+.ast-plain-container {
+  background-color: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.site-content .ast-container {
+  display: block;
+  width: 100%;
+}
+
+.gform_required_legend {
+  display: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #606060 !important;
+}
+.gf_placeholder {
+  color: #606060 !important;
+}
+
+label,
+legend {
+  font-family: $font-primary !important;
+  font-weight: $font-semibold !important;
+  color: $clr-black !important;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+  font-family: $font-primary !important;
+  border-radius: 0.25rem !important;
+  // height: 3rem !important;
+  border-color: $clr-black !important;
+}
+input[type="submit"] {
+  font-family: $font-primary !important;
+  font-weight: $font-semibold !important;
+  background-color: transparent !important;
+  width: 10rem !important;
+  border-radius: 0.25rem !important;
+  color: $clr-black !important;
+  border: 2px solid $clr-orange !important;
+
+  &:hover {
+    background-color: $clr-orange !important;
+    color: $clr-white !important;
+  }
+}
+.ginput_container {
+  align-items: center !important;
+}
+input[type="checkbox"] {
+  width: 1rem !important;
+  height: 1rem !important;
+  border-radius: 0.25rem !important;
+}
+
+input[type="checkbox"] + label {
+  &:hover {
+    cursor: pointer !important;
+  }
+}
+
+input[type="radio"] + label {
+  &:hover {
+    cursor: pointer !important;
+  }
+}
+
+input[type="checkbox"]::before {
+  display: none;
+}
+
+input[type="radio"]::before {
+  display: none;
+}
+
+input[type="checkbox"]:checked {
+  border-color: $clr-orange !important;
+  background-color: $clr-orange !important;
+}
+
+input[type="radio"]:checked {
+  border-color: $clr-orange !important;
+  background-color: $clr-orange !important;
+}
+
+.swiper-pagination-bullet {
+  color: $clr-orange !important;
+  background: $clr-orange !important;
+  width: 1rem !important;
+  height: 1rem !important;
+}
+.swiper-pagination {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+}
+.post-password-form {
+  text-align: left;
+}
+.post-password-form input[type="submit"] {
+  margin-top: 2rem;
+}
+#pwbox-343 {
+  width: 15rem;
+}
+
+// Custom Pagination
+.pagination {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+
+  .current {
+    background-color: $clr-orange;
+    padding: 0.25rem 1rem;
+    border-radius: 0.25rem;
+    color: $clr-white;
+    font-weight: $font-semibold;
+
+    &:hover {
+      color: $clr-white;
+    }
+  }
+
+  a {
+    background-color: $clr-grey;
+    font-weight: $font-semibold;
+    color: $clr-white;
+    padding: 0.25rem 1rem;
+    border-radius: 0.25rem;
+
+    &:hover {
+      background-color: $clr-orangeTransparent;
+      color: $clr-black;
+    }
+
+    &:focus {
+      color: $clr-black;
+    }
+  }
+}
+
+// Popup Customization
+.pum-container {
+  background: none !important;
+  box-shadow: none !important;
+
+  img {
+    height: 12rem;
+
+    @include media(">=xl") {
+      height: 18.75rem !important;
+      object-fit: cover !important;
+    }
+  }
+}
+.pum-content {
+  background: none !important;
+}
+.pum-content .exclusive-events {
+  border: 2px solid #f27a21;
+}
+.pum-close {
+  background: none !important;
+  color: $clr-orange !important;
+  border: none !important;
+  box-shadow: none !important;
+  right: 2rem !important;
+  top: 2rem !important;
+  font-size: 1.5rem !important;
+  font-weight: $font-semibold !important;
+
+  &:hover {
+    color: $clr-black !important;
+  }
+}

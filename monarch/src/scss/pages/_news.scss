@@ -1,0 +1,126 @@
+@use "../abstracts/variables" as v;
+
+.news {
+  .hero {
+    min-height: 12.5rem;
+    // align-items: center;
+    // justify-content: center;
+
+    @include media(">=md") {
+      justify-content: flex-end;
+      min-height: 18rem;
+    }
+
+    @include media(">lg") {
+      min-height: 24rem;
+    }
+
+    &__content {
+      @include media(">=md") {
+        display: flex;
+        text-align: left;
+      }
+    }
+
+    &__content-img {
+      img {
+        display: none;
+
+        @include media(">=md") {
+          display: block;
+          width: 15rem;
+          margin-left: 2rem;
+        }
+
+        @include media(">=lg") {
+          width: 20rem;
+          margin-left: 5rem;
+        }
+
+        @include media(">=xl") {
+          width: 28rem;
+        }
+      }
+    }
+
+    &__content-title {
+      width: 20rem;
+      justify-content: flex-end;
+
+      @include media(">=md") {
+        width: 25rem;
+      }
+
+      @include media(">=lg") {
+        width: 32rem;
+      }
+
+      @include media(">=xl") {
+        width: 40rem;
+      }
+
+      h2 {
+        font-size: clamp(2rem, 5vw, 3rem);
+        color: $clr-white;
+        font-weight: $font-semibold;
+        padding-bottom: 1rem;
+        border-bottom: 3px solid $clr-orange;
+
+        @include media(">=md") {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 4rem 0;
+
+    p {
+      text-align: center;
+    }
+
+    @include media(">lg") {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    gap: 2rem;
+
+    @include media(">=lg") {
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+  }
+
+  &__post {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    &__title {
+      color: $clr-black;
+      font-weight: $font-semibold;
+      font-size: 1.5rem;
+      line-height: 1.1;
+    }
+
+    &-image {
+      img {
+        border-radius: 1rem;
+      }
+    }
+  }
+}

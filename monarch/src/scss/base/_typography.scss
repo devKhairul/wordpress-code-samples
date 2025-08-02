@@ -1,0 +1,14 @@
+/**
+ * Basic typography style
+ */
+
+@use "../abstracts/variables";
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+$font-primary: "Montserrat", sans-serif;
+$font-secondary: "Open Sans", sans-serif;
+
+$font-normal: 400;
+$font-semibold: 600;
+$font-bold: 700;

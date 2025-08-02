@@ -1,0 +1,44 @@
+.case-studies {
+  .hero {
+    background-image: url("/wp-content/uploads/2024/12/bg-rect.png");
+    min-height: 18rem;
+
+    @include media(">=lg") {
+      min-height: 24rem;
+    }
+
+    &__content-img {
+      img {
+        @include media(">=md") {
+          width: 20rem;
+        }
+
+        @include media(">=lg") {
+          width: 32rem;
+        }
+      }
+    }
+
+    &__content-text-quote-container {
+      @include media(">=lg") {
+        width: 30rem;
+      }
+
+      @include media(">=xl") {
+        width: 40rem;
+      }
+    }
+  }
+
+  .video {
+    width: 100%;
+    background-color: $clr-orangeTransparent;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 4rem;
+
+    @include media(">=lg") {
+      padding: 4rem;
+    }
+  }
+}

@@ -1,0 +1,118 @@
+@use "../abstracts/variables" as v;
+
+.mi-single {
+  .hero {
+    background: transparent;
+    align-items: center;
+    min-height: 20rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include media(">lg") {
+      min-height: 30rem;
+    }
+  }
+
+  .post {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 4rem 0;
+
+    &__title {
+      font-size: 1rem;
+      font-weight: $font-semibold;
+      text-transform: uppercase;
+      color: $clr-black;
+
+      @include media(">lg") {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      @include media(">lg") {
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      h1 {
+        font-size: clamp(1.5rem, 5vw, 3rem);
+        line-height: 1.1;
+        font-weight: $font-semibold;
+        color: $clr-black;
+      }
+
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-size: 1.5rem;
+        line-height: 1.1;
+        font-weight: $font-semibold;
+        color: $clr-black;
+      }
+
+      ul {
+        margin: 0;
+      }
+
+      li {
+        margin-bottom: 1rem;
+        list-style: none;
+
+        &::before {
+          content: "\25B6";
+          color: $clr-navyblue;
+          padding-right: 0.5rem;
+        }
+      }
+
+      a {
+        &:focus {
+          color: $clr-black !important;
+        }
+      }
+    }
+
+    &__footnote {
+      background-color: #ffede0;
+      padding: 4rem;
+      border-radius: 1rem;
+      margin-top: 4rem;
+
+      h2 {
+        font-size: 1.5rem;
+        color: $clr-black;
+        font-weight: $font-semibold;
+        padding-bottom: 1rem;
+
+        @include media(">lg") {
+          width: 90%;
+          margin: 0 auto;
+        }
+      }
+
+      p {
+        padding-bottom: 1rem;
+
+        @include media(">lg") {
+          width: 90%;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    &__date {
+      font-family: $font-secondary;
+      font-size: 0.875rem;
+    }
+  }
+}

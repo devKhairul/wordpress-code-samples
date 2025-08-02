@@ -1,0 +1,39 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+
+@use "typography" as *;
+
+h1 {
+  font-family: $font-primary;
+  font-weight: $font-bold;
+  margin: 0;
+  padding: 0;
+  line-height: 1.25;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-primary;
+  font-weight: $font-semibold;
+  margin: 0;
+  padding: 0;
+  line-height: 1.25;
+}
+
+p {
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+a,
+li {
+  font-family: $font-primary;
+  margin: 0;
+  padding: 0;
+  // line-height: 1.25;
+}
