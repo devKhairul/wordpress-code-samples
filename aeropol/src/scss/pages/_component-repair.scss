@@ -1,0 +1,411 @@
+@use "../abstracts/variables" as v;
+
+.component-repair {
+  .hero {
+    background-image: url("/wp-content/uploads/2024/11/ComponentRO_header.jpg");
+  }
+
+  .pneumatics {
+    @include media(">lg") {
+      width: 82%;
+      margin: 0 auto;
+    }
+
+    &__photo-grid {
+      display: grid;
+      gap: 2rem;
+
+      @include media(">=md") {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      img {
+        border-radius: 1rem;
+      }
+    }
+
+    &__row-1 {
+      display: flex;
+      gap: 2rem;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      h2 {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        line-height: 1;
+        color: $clr-navyblue;
+        font-weight: $font-semibold;
+      }
+    }
+
+    &__row-2 {
+      margin: 4rem 0;
+      display: flex;
+      gap: 3rem;
+      flex-direction: column;
+      align-items: center;
+
+      & > h3 {
+        font-size: 2rem;
+        line-height: 1;
+        color: $clr-navyblue;
+        font-weight: $font-semibold;
+      }
+
+      .pneumatics__grid {
+        display: grid;
+        gap: 2rem;
+
+        @include media(">=md") {
+          grid-template-columns: 1fr 1fr;
+          grid-column-gap: 6rem;
+          grid-row-gap: 4rem;
+        }
+
+        &__card {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+
+          h3 {
+            font-size: 1.5rem;
+            line-height: 1;
+            color: $clr-navyblue;
+            font-weight: $font-semibold;
+          }
+        }
+      }
+
+      .pneumatics__footer {
+        p {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .hydraulics {
+    @include media(">lg") {
+      width: 82%;
+      margin: 0 auto;
+    }
+
+    &__photo-grid {
+      display: grid;
+      gap: 2rem;
+
+      @include media(">=md") {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      img {
+        border-radius: 1rem;
+      }
+    }
+
+    &__row-1 {
+      display: flex;
+      gap: 2rem;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      h2 {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        line-height: 1;
+        color: $clr-navyblue;
+        font-weight: $font-semibold;
+      }
+    }
+
+    &__row-2 {
+      margin: 4rem 0;
+      display: flex;
+      gap: 3rem;
+      flex-direction: column;
+      align-items: center;
+
+      & > h3 {
+        font-size: 2rem;
+        line-height: 1;
+        color: $clr-navyblue;
+        font-weight: $font-semibold;
+      }
+
+      .hydraulics__grid {
+        display: grid;
+
+        gap: 2rem;
+
+        @include media(">=md") {
+          grid-template-columns: 1fr 1fr;
+          grid-column-gap: 6rem;
+          grid-row-gap: 4rem;
+        }
+
+        &__card {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+
+          h3 {
+            font-size: 1.5rem;
+            line-height: 1;
+            color: $clr-navyblue;
+            font-weight: $font-semibold;
+          }
+        }
+      }
+
+      .hydraulics__footer {
+        p {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .electrical {
+    @include media(">lg") {
+      width: 82%;
+      margin: 0 auto;
+    }
+
+    &__photo-grid {
+      display: grid;
+      gap: 2rem;
+
+      @include media(">=md") {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      img {
+        border-radius: 1rem;
+      }
+    }
+
+    &__row-1 {
+      display: flex;
+      gap: 2rem;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      h2 {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        line-height: 1;
+        color: $clr-navyblue;
+        font-weight: $font-semibold;
+      }
+    }
+
+    &__row-2 {
+      margin: 4rem 0;
+      display: flex;
+      gap: 3rem;
+      flex-direction: column;
+      align-items: center;
+
+      & > h3 {
+        font-size: 2rem;
+        line-height: 1;
+        color: $clr-navyblue;
+        font-weight: $font-semibold;
+      }
+
+      .electrical__grid {
+        display: grid;
+
+        gap: 2rem;
+
+        @include media(">=md") {
+          grid-template-columns: 1fr 1fr;
+          grid-column-gap: 6rem;
+          grid-row-gap: 4rem;
+        }
+
+        &__card {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+
+          h3 {
+            font-size: 1.5rem;
+            line-height: 1;
+            color: $clr-navyblue;
+            font-weight: $font-semibold;
+          }
+        }
+      }
+
+      .electrical__footer {
+        p {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .mechanical {
+    @include media(">lg") {
+      width: 82%;
+      margin: 0 auto;
+    }
+
+    &__photo-grid {
+      display: grid;
+      gap: 2rem;
+
+      @include media(">=md") {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      img {
+        border-radius: 1rem;
+      }
+    }
+
+    &__row-1 {
+      display: flex;
+      gap: 2rem;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      h2 {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        line-height: 1;
+        color: $clr-navyblue;
+        font-weight: $font-semibold;
+      }
+    }
+
+    &__row-2 {
+      margin: 4rem 0;
+      display: flex;
+      gap: 3rem;
+      flex-direction: column;
+      align-items: center;
+
+      & > h3 {
+        font-size: 2rem;
+        line-height: 1;
+        color: $clr-navyblue;
+        font-weight: $font-semibold;
+      }
+
+      .mechanical__grid {
+        display: grid;
+
+        gap: 2rem;
+
+        @include media(">=md") {
+          grid-template-columns: 1fr 1fr;
+          grid-column-gap: 6rem;
+          grid-row-gap: 4rem;
+        }
+
+        &__card {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+
+          h3 {
+            font-size: 1.5rem;
+            line-height: 1;
+            color: $clr-navyblue;
+            font-weight: $font-semibold;
+          }
+        }
+      }
+
+      .mechanical__footer {
+        p {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .fuel-system {
+    @include media(">lg") {
+      width: 85%;
+      margin: 0 auto;
+    }
+
+    &__photo-grid {
+      display: grid;
+      gap: 2rem;
+
+      @include media(">=md") {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      img {
+        border-radius: 1rem;
+      }
+    }
+
+    &__row-1 {
+      display: flex;
+      gap: 2rem;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      h2 {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        line-height: 1;
+        color: $clr-navyblue;
+        font-weight: $font-semibold;
+      }
+    }
+
+    &__row-2 {
+      margin: 4rem 0;
+      display: flex;
+      gap: 3rem;
+      flex-direction: column;
+      align-items: center;
+
+      & > h3 {
+        font-size: 2rem;
+        line-height: 1;
+        color: $clr-navyblue;
+        font-weight: $font-semibold;
+      }
+
+      .fuel-system__grid {
+        display: grid;
+
+        gap: 2rem;
+
+        @include media(">=md") {
+          grid-template-columns: 1fr 1fr;
+          grid-column-gap: 6rem;
+          grid-row-gap: 4rem;
+        }
+
+        &__card {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+
+          h3 {
+            font-size: 1.5rem;
+            line-height: 1;
+            color: $clr-navyblue;
+            font-weight: $font-semibold;
+          }
+        }
+      }
+
+      .fuel-system__footer {
+        p {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

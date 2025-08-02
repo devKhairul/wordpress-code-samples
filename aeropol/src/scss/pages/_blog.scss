@@ -1,0 +1,87 @@
+@use "../abstracts/variables" as v;
+
+.blog {
+  .hero {
+    background-image: url("/wp-content/uploads/2025/01/blog-header-scaled.jpg");
+    background-position: 82%;
+
+    @include media(">=lg") {
+      background-position: center;
+    }
+
+    p {
+      @include media(">=lg") {
+        width: 65%;
+      }
+    }
+  }
+
+  &__items {
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include media(">md") {
+      width: 90%;
+    }
+
+    @include media(">lg") {
+      padding: 4rem 10rem 0 10rem;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      color: $clr-navyblue;
+      font-weight: $font-semibold;
+      text-align: center;
+    }
+  }
+
+  &__post {
+    display: grid;
+    gap: 2rem;
+
+    @include media(">=md") {
+      grid-template-columns: 2fr 1fr;
+      align-items: center;
+      justify-items: center;
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+
+      .post__category {
+        color: $clr-orange;
+        font-weight: $font-semibold;
+        text-transform: uppercase;
+      }
+
+      .post__title {
+        color: $clr-navyblue;
+        font-weight: $font-semibold;
+        font-size: clamp(1.5rem, 5vw, 2rem);
+        line-height: 1.1;
+
+        &:hover {
+          color: $clr-orange;
+        }
+      }
+    }
+
+    &-image {
+      img {
+        border-radius: 1rem;
+
+        @include media(">=md") {
+          width: 150px;
+          height: 150px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

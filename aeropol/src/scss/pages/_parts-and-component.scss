@@ -1,0 +1,52 @@
+@use "../abstracts/variables" as v;
+
+.parts-component {
+  .hero {
+    background-image: url("/wp-content/uploads/2025/01/parts-header.jpg");
+  }
+
+  .photo-grid {
+    display: grid;
+    gap: 2rem;
+    padding-bottom: 4rem;
+
+    @include media(">=md") {
+      grid-template-columns: 1fr 1fr;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    img {
+      border-radius: 1rem;
+
+      &:first-child {
+        justify-self: end;
+      }
+    }
+  }
+
+  .component-leasing {
+    padding-bottom: 4rem;
+
+    @include media(">=lg") {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: $font-semibold;
+      color: $clr-navyblue;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .cta {
+    margin: 0;
+    margin-bottom: 4rem;
+  }
+}

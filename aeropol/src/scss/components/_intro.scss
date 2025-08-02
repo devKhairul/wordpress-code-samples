@@ -1,0 +1,31 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 0rem;
+
+  @include media(">=md") {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  @include media(">=lg") {
+    padding: 4rem 0rem;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.1;
+    font-weight: $font-semibold;
+    color: $clr-navyblue;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: $clr-darkgrey;
+    text-wrap: pretty;
+  }
+}

@@ -1,0 +1,60 @@
+@use "../abstracts/variables" as v;
+
+.leadership {
+  .hero {
+    background-image: url("/wp-content/uploads/2025/01/leadership-overhead-scaled.jpg");
+    background-position: 85%;
+
+    @include media(">=lg") {
+      background-position: center center;
+    }
+  }
+
+  .intro {
+    @include media(">=md") {
+      width: 70%;
+      margin: 0 auto;
+    }
+  }
+
+  &__team {
+    display: grid;
+    grid-column-gap: 2rem;
+    grid-row-gap: 4rem;
+
+    @include media(">=md") {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media(">=lg") {
+      width: 70%;
+      margin: 0 auto;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &-member {
+      display: grid;
+
+      h3 {
+        color: $clr-navyblue;
+        font-weight: $font-bold;
+      }
+
+      img {
+        border-radius: 1rem;
+      }
+
+      &-name {
+        margin-top: 0.75rem;
+      }
+
+      &-designation {
+        margin-bottom: 0.75rem;
+
+        p {
+          color: $clr-navyblue;
+        }
+      }
+    }
+  }
+}

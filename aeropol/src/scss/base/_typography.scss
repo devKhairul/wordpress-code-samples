@@ -1,0 +1,14 @@
+/**
+ * Basic typography style
+ */
+
+@use "../abstracts/variables";
+
+@import url("https://use.typekit.net/ybb1mfb.css");
+
+$font-primary: "nicholas", sans-serif;
+$font-secondary: "Raleway", sans-serif;
+
+$font-normal: 400;
+$font-semibold: 600;
+$font-bold: 700;

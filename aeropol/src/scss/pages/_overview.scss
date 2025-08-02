@@ -1,0 +1,81 @@
+@use "../abstracts/variables" as v;
+
+.overview {
+  .hero {
+    background-image: url("/wp-content/uploads/2025/01/overview-header-scaled.jpg");
+  }
+
+  .content {
+    display: grid;
+    grid-auto-flow: dense;
+    gap: 2rem;
+    padding-bottom: 4rem;
+
+    @include media(">=md") {
+      width: 85%;
+      margin: 0 auto;
+      gap: 3rem;
+    }
+
+    &__row-1,
+    &__row-2 {
+      display: grid;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    &__row-1 {
+      @include media(">=md") {
+        grid-template-columns: 2fr 1.5fr;
+      }
+
+      &__text {
+        order: 2;
+      }
+
+      &__image {
+        order: 1;
+
+        @include media(">=md") {
+          order: 2;
+        }
+
+        img {
+          width: 100%;
+          border-radius: 0.5rem;
+        }
+      }
+    }
+
+    &__row-2 {
+      @include media(">=md") {
+        grid-template-columns: 1.5fr 2fr;
+      }
+
+      &__image {
+        img {
+          width: 100%;
+          border-radius: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .capabilities {
+    padding-bottom: 4rem;
+    display: grid;
+    gap: 1rem;
+    text-align: center;
+
+    @include media(">=md") {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 5vw, 2.5rem);
+      color: $clr-navyblue;
+      font-weight: $font-semibold;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to buttons
+// -----------------------------------------------------------------------------
+
+.btn-link {
+    color: $clr-orange;
+    font-weight: $font-semibold;
+
+    &:hover {
+        color: $clr-navyblue;
+    }
+}
+
+.btn {
+    font-weight: $font-bold;
+    color: $clr-white;
+    background-color: $clr-orange;
+    padding: 0.5rem 2rem;
+    border-radius: 50px;
+
+    &:hover {
+        background-color: $clr-white;
+        color: $clr-orange;
+    }
+}

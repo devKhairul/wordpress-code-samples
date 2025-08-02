@@ -1,0 +1,44 @@
+@use "../abstracts/variables" as v;
+
+.component-marketplace {
+  .hero {
+    background-image: url("/wp-content/uploads/2025/01/aircraftsupported-header-scaled.jpg");
+    background-position: 15%;
+
+    &__content {
+      p {
+        @include media(">=md") {
+          width: 45%;
+        }
+      }
+    }
+  }
+
+  .intro {
+    padding-bottom: 4rem;
+
+    h2 {
+      width: 100%;
+    }
+
+    p {
+      @include media(">=md") {
+        width: 75%;
+      }
+    }
+
+    ul {
+      padding-top: 1rem;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: end;
+      justify-content: center;
+
+      li {
+        list-style: none;
+      }
+    }
+  }
+}

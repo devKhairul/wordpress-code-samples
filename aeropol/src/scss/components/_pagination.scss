@@ -1,0 +1,26 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the pagination component.
+// -----------------------------------------------------------------------------
+
+@use "../abstracts/variables";
+
+.blog__pagination {
+    margin: 3rem 0;
+
+    display: flex;
+    gap: 0.5rem;
+
+    .page-numbers {
+        margin: 0;
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        color: $clr-orange;
+        font-weight: $font-semibold;
+    }
+
+    .current {
+        color: $clr-navyblue;
+    }
+}

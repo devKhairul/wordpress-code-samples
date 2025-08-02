@@ -1,0 +1,157 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+@use "../base/typography" as *;
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-margin-top: 2rem;
+  font-size: 100%;
+}
+
+.ast-separate-container,
+.ast-plain-container {
+  background-color: #fff;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.site-content .ast-container {
+  display: block;
+  width: 100%;
+}
+.gform_required_legend {
+  display: none;
+}
+label,
+legend {
+  font-family: $font-secondary !important;
+  font-weight: $font-semibold !important;
+  color: $clr-darkgrey !important;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  font-family: $font-secondary !important;
+  border-radius: 0 !important;
+  height: 3rem !important;
+  border-color: $clr-grey !important;
+}
+input[type="submit"] {
+  font-family: $font-secondary !important;
+  font-weight: $font-semibold !important;
+  background-color: $clr-orange !important;
+  width: 10rem !important;
+  border-radius: 50px !important;
+  color: $clr-white !important;
+  text-transform: uppercase !important;
+  border: none !important;
+
+  &:hover {
+    background-color: $clr-navyblue !important;
+    color: $clr-white !important;
+  }
+}
+
+input[type="radio"] + label {
+  &:hover {
+    cursor: pointer !important;
+  }
+}
+
+input[type="radio"]:checked {
+  border-color: $clr-orange !important;
+  background-color: $clr-orange !important;
+}
+
+.gfield_required_asterisk {
+  font-size: 1.5rem !important;
+}
+.gform-field-label {
+  align-items: center !important;
+}
+
+.gform-theme--framework
+  input[type="radio"]:where(
+    :not(.gform-theme__disable):not(.gform-theme__disable *):not(
+        .gform-theme__disable-framework
+      ):not(.gform-theme__disable-framework *)
+  )::before {
+  opacity: 0 !important;
+}
+
+.gform_button_select_files {
+  background-color: $clr-orange !important;
+}
+.gform-theme--framework
+  .gfield:where(.gfield--type-fileupload, .gfield--input-type-fileupload)
+  .gform_drop_area::before {
+  color: $clr-orange !important;
+}
+.gform_confirmation_message {
+  font-family: "Raleway", sans-serif !important;
+}
+// Popup Maker
+.pum-theme-374 .pum-container,
+.pum-theme-lightbox .pum-container {
+  background-color: $clr-white;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 1rem;
+  padding: 4rem;
+}
+
+.pum-theme-374 .pum-content + .pum-close,
+.pum-theme-lightbox .pum-content + .pum-close {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  left: auto;
+  right: 20px;
+  bottom: auto;
+  top: 20px;
+  padding: 0px;
+  color: $clr-darkgrey !important;
+  font-family: $font-secondary;
+  font-weight: 700;
+  font-size: 16px;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  background-color: #ffffff !important;
+}
+.pum-content {
+  h3 {
+    font-family: $font-primary !important;
+    font-size: 1.5rem !important;
+    font-weight: $font-bold !important;
+    color: $clr-navyblue !important;
+  }
+
+  p {
+    color: #414536;
+    margin-bottom: 1rem;
+
+    &:first-of-type {
+      color: $clr-navyblue;
+    }
+  }
+}
+.pum-title {
+  display: none;
+}

@@ -1,0 +1,48 @@
+.page {
+  &__hero {
+    height: 20rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: end;
+    background: $clr-bg;
+    padding-bottom: 2rem;
+
+    h1 {
+      font-size: 5rem;
+      line-height: 1;
+      font-weight: $font-bold;
+      color: $clr-navyblue;
+    }
+  }
+
+  &__content {
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+    padding: 4rem 0;
+
+    ul,
+    ol {
+      margin: 0;
+      margin-left: 1rem;
+
+      li {
+        margin: 2rem 0 0.5rem 0;
+
+        &::marker {
+          font-weight: bold;
+        }
+      }
+    }
+
+    a {
+      color: $clr-orange;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+}

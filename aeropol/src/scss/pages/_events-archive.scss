@@ -1,0 +1,73 @@
+@use "../abstracts/variables" as v;
+
+.events {
+  .hero {
+    background-image: url("/wp-content/uploads/2025/01/event-header-scaled.jpg");
+
+    p {
+      @include media(">=md") {
+        width: 70%;
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 4rem 0rem;
+
+    h2 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      color: $clr-navyblue;
+      font-weight: $font-semibold;
+      text-align: center;
+    }
+  }
+
+  &__post {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+
+    @include media(">=md") {
+      flex-direction: row;
+    }
+
+    &-content {
+      flex-basis: 50%;
+      h3 {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    &-location {
+      text-transform: uppercase;
+      color: $clr-orange;
+      font-weight: $font-bold;
+    }
+
+    &-title {
+      font-size: 1.5rem;
+      font-weight: $font-bold;
+      color: $clr-navyblue;
+    }
+
+    &-date {
+      margin-top: 1rem;
+    }
+
+    &-image {
+      img {
+        width: 100px;
+        height: 100px;
+        border-radius: 0.5rem;
+
+        @include media(">=md") {
+          width: 150px;
+          height: 150px;
+        }
+      }
+    }
+  }
+}

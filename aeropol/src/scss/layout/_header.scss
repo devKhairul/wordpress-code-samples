@@ -1,0 +1,99 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+@use "../abstracts/breakpoints";
+
+.site-header {
+  .main-header-bar {
+    background: linear-gradient(
+      180deg,
+      #00325b 6%,
+      rgba(0, 50, 91, 0) 100%
+    ) !important;
+  }
+
+  .main-header-menu > .menu-item > .menu-link {
+    @include media(">xl") {
+      line-height: 1;
+    }
+  }
+
+  .sub-menu {
+    background-color: $clr-navyblue;
+    width: 300px;
+    padding: 1rem 0;
+
+    li {
+      line-height: 1.25;
+    }
+
+    .menu-link {
+      font-weight: $font-semibold;
+      padding: 0.4rem 1rem;
+    }
+  }
+
+  #menu-item-188 .menu-link,
+  #menu-item-202 .menu-link {
+    font-weight: $font-semibold;
+  }
+
+  #ast-hf-menu-1 {
+    @include media(">=xl") {
+      gap: 1.5rem;
+    }
+  }
+
+  .btn-support {
+    background-color: $clr-orange;
+    border-radius: 50px;
+    padding: 1rem 0.5rem;
+    font-weight: $font-bold;
+    border: 0;
+
+    @include media(">lg") {
+      padding: 1rem 1.5rem;
+    }
+
+    &:hover {
+      background-color: $clr-navyblue;
+      color: $clr-orange;
+    }
+
+    .menu-link {
+      color: $clr-white !important;
+    }
+  }
+
+  #ast-hf-mobile-menu {
+    .ast-menu-toggle {
+      border: none !important;
+      text-shadow: none !important;
+      box-shadow: none !important;
+    }
+
+    .sub-menu li {
+      line-height: 2rem;
+      padding: 0;
+    }
+
+    .menu-link {
+      font-weight: $font-semibold;
+      color: $clr-navyblue;
+      padding: 0 1.5rem;
+
+      &:hover {
+        color: $clr-orange;
+      }
+    }
+  }
+
+  .font-normal .menu-link {
+    font-weight: $font-normal !important;
+  }
+
+  .ast-primary-header-bar .main-header-menu > .menu-item {
+    line-height: 1 !important;
+  }
+}

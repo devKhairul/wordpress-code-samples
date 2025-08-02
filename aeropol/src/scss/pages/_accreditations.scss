@@ -1,0 +1,72 @@
+@use "../abstracts/variables" as v;
+
+.accreditations {
+  .hero {
+    background-image: url("/wp-content/uploads/2025/01/certifications-header-scaled.jpg");
+    background-position: 20%;
+
+    &__content {
+      p {
+        @include media(">=md") {
+          width: 45%;
+        }
+      }
+    }
+  }
+
+  .certificates {
+    display: grid;
+    gap: 2rem;
+    padding-bottom: 4rem;
+
+    @include media(">lg") {
+      width: 75%;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: $font-semibold;
+      color: $clr-navyblue;
+      justify-self: center;
+    }
+
+    ul {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      list-style: none;
+    }
+    a {
+      color: $clr-orange;
+      font-weight: $font-semibold;
+
+      &:hover {
+        color: $clr-navyblue;
+      }
+    }
+  }
+
+  .footnote {
+    display: grid;
+    gap: 1rem;
+    padding-bottom: 4rem;
+
+    @include media(">lg") {
+      width: 75%;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: $font-semibold;
+      color: $clr-navyblue;
+      justify-self: center;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+}

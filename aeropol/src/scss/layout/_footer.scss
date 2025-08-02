@@ -1,0 +1,86 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+@use "../abstracts/breakpoints";
+@use "../abstracts/variables";
+
+.site-footer {
+  a {
+    color: $clr-white;
+
+    &:hover {
+      color: $clr-orange;
+    }
+  }
+
+  .widget-title {
+    font-family: $font-secondary;
+    font-weight: $font-semibold;
+    color: $clr-white;
+    font-size: 1rem;
+
+    @include media("<md") {
+      text-align: center;
+    }
+  }
+
+  #menu-item-58,
+  #menu-item-221 {
+    font-weight: $font-semibold;
+  }
+
+  #menu-footer-company,
+  #menu-footer-services,
+  #menu-footer-contact {
+    @include media("<md") {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .ast-footer-html-2 {
+    margin-top: 4rem;
+
+    h4 {
+      font-family: $font-secondary;
+      color: $clr-white;
+      font-size: 1rem;
+    }
+    ul {
+      padding-top: 1rem;
+      margin: 0;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+
+      @include media(">md") {
+        justify-content: flex-start;
+      }
+
+      li {
+        list-style: none;
+      }
+    }
+  }
+
+  .ast-builder-footer-grid-columns {
+    grid-column-gap: 40px !important;
+  }
+  .site-footer-above-section-4 {
+    @include media(">2xl") {
+      padding-left: 3rem !important;
+    }
+  }
+
+  #block-8 {
+    text-align: center;
+
+    @include media(">md") {
+      text-align: right;
+    }
+  }
+}
