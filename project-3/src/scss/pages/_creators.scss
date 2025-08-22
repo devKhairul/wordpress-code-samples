@@ -11,7 +11,9 @@
         &__content {
 
             h1 {
-                width: fit-content;
+                @include media('>=lg') {
+                    width: 35rem;
+                }   
             }
 
             a {
@@ -19,9 +21,13 @@
             }
 
             p {
-                font-size: 1.5rem;
+                font-size: 1rem;
                 line-height: 1.25;
                 color: $clr-white;
+
+                @include media('>=md') {
+                    font-size: 1.5rem;
+                }
 
                 @include media('>=lg') {
                     width: 42rem;
@@ -174,7 +180,11 @@
             gap: 1rem;
             background-color: $clr-white;
             border-radius: 1rem;
-            padding: 4rem;
+            padding: 2rem;
+
+            @include media('>=lg') {
+                padding: 4rem;
+            }
         }
 
         &__content {
@@ -201,7 +211,7 @@
                 color: $clr-purple;
                 text-align: center;
 
-                @include media('>=md') {
+                @include media('>=lg') {
                     width: 50rem;
                 }
             }
@@ -221,6 +231,14 @@
 
     .cta {
         &__wrapper {
+            a {
+                @include button-style($bg: $clr-lightOrange, $text: $clr-white, $hover-bg: $clr-darkOrange, $hover-text: $clr-white);
+            }
+        }
+    }
+
+    .featured-creators {
+        &__footer {
             a {
                 @include button-style($bg: $clr-lightOrange, $text: $clr-white, $hover-bg: $clr-darkOrange, $hover-text: $clr-white);
             }

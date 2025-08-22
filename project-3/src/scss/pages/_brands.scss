@@ -9,8 +9,12 @@
         }
 
         p {
-            font-size: 1.5rem;
+            font-size: 1rem;
             line-height: 1.25;
+
+            @include media('>=md') {
+                font-size: 1.5rem;
+            }
         }
 
         a {
@@ -50,19 +54,25 @@
             }
         }
 
+        &__logo-wrapper {
+            background-color: $clr-white;
+            border-radius: 1.875rem;
+            padding: 2rem 0;
+            width: 100%;
+        }
+
         &__logos {
             row-gap: 2rem;
-            background: $clr-white;
-            border-radius: 1.875rem;
-            padding-bottom: 2rem;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 2rem;
 
-            @include media('>lg') {
+            @include media('>=lg') {
                 gap: 5rem;
                 row-gap: 2rem;
+                width: 50rem;
+                margin: 0 auto;
             }
 
             img {
@@ -73,6 +83,13 @@
                     transform: scale(1.05);
                 }
             }
+        }
+    }
+
+    .testimonials {
+        .slide-logo__wrapper {
+            position: relative;
+            width: 15rem;
         }
     }
 }

@@ -20,6 +20,23 @@
             color: $clr-darkOrange !important;
         }
     }
+
+    .sub-menu {
+        background-color: rgba(0,0,0,0.5);
+        border-radius: 1rem;
+        border: none !important;
+        box-shadow: unset !important;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 1rem 0;
+        max-width: 10rem;
+    }
+    .sub-menu li a {
+        font-family: 'Gibson Medium', sans-serif;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
 }
 
 .ast-mobile-popup-inner {

@@ -77,7 +77,7 @@ get_header(); ?>
         <?php endif; ?>
 
         <?php if ( get_field('refer_text') ) : ?>
-            <div class="refer">
+            <div class="refer" id="refer">
                 <div class="ast-container">
                     <div class="refer__wrapper">
                         <?php

@@ -35,7 +35,7 @@ get_header();
                     </div>
 
                     <div class="brands__image">
-                        <img src="/wp-content/uploads/2025/07/blurred-logos.png" alt="Blurred Client Logos Image">    
+                        <img src="/wp-content/uploads/2025/08/blurred_brands.png" alt="Blurred Client Logos Image">    
                     </div>
                     
                 </div> <!-- .brands__wrapper -->

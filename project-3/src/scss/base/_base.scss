@@ -109,7 +109,12 @@ select {
 .gform_fileupload_rules {
   font-family: 'Gibson', sans-serif !important;
 }
-
+.gform_confirmation_message {
+  font-family: 'Gibson', sans-serif !important;
+  font-size: 1.25rem !important;
+  line-height: 1.25 !important;
+  color: #fff !important;
+}
 
 @keyframes float {
   0%   { transform: translateY(0); }

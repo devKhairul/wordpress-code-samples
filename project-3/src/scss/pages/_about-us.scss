@@ -19,6 +19,8 @@
             }
 
             p {
+                font-size: 1.5rem;
+                
                 @include media('>=lg') {
                     width: 36rem;
                 }
@@ -27,7 +29,15 @@
     }
 
     .info {
-        
+
+        background-color: #ffffff10;
+        padding: 2rem;
+        border-radius: 1rem;
+
+        @include media('>=lg') {
+            padding: 4rem;
+        }   
+
         &__wrapper {
             display: grid;
             gap: 2rem;
@@ -48,7 +58,9 @@
             }
 
             &-image {
-                width: 385px;
+                @include media('>=lg') {
+                    width: 385px;
+                }
             }
 
             &-content {
@@ -98,7 +110,7 @@
         &__wrapper {
             
             p {
-                @include media('>=md') {
+                @include media('>=lg') {
                     width: 69rem;
                 }
             }

@@ -34,13 +34,15 @@ get_header();
                     </div>
                     
                     <?php if ( have_rows('brands_logos') ) : ?>
-                        <div class="brands__logos">
-                            <?php while ( have_rows('brands_logos') ) : the_row(); 
-                                $brand_logo = get_sub_field('brand_logo'); ?>
+                        <div class="brands__logo-wrapper">
+                            <div class="brands__logos">
+                                <?php while ( have_rows('brands_logos') ) : the_row(); 
+                                    $brand_logo = get_sub_field('brand_logo'); ?>
 
-                                <img src="<?= $brand_logo['url'] ?>" alt="<?= $brand_logo['alt'] ?>" />
-                            <?php endwhile; ?>
-                        </div> <!-- .brands__logos -->
+                                    <img src="<?= $brand_logo['url'] ?>" alt="<?= $brand_logo['alt'] ?>" />
+                                <?php endwhile; ?>
+                            </div> <!-- .brands__logos -->
+                        </div>
                     <?php endif; ?>
                 </div> <!-- .brands__wrapper -->
             </div>        

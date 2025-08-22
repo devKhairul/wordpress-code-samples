@@ -4,14 +4,18 @@
     .hero {
         &__content {
             h1 {
-                @include media('>lg') {
-                    width: 30rem;
+                @include media('>=lg') {
+                    width: 25rem;
                 }
             }
 
             p {
-                font-size: 1.5rem;
+                font-size: 1rem;
                 line-height: 1.25;
+
+                @include media('>=md') {
+                    font-size: 1.5rem;
+                }
 
                 @include media('>lg') {
                     width: 34rem;
@@ -46,15 +50,20 @@
             flex-direction: column;
             align-items: flex-start;
             gap: 1rem;
-            padding: 4rem;
+            padding: 2rem;
             border-radius: 1.175rem;
             background: rgba(255, 255, 255, 0.05);
 
-            @include media('>md') {
-                min-height: 40rem;
+            @include media('>=md') {
+                min-height: 30rem;
             }
 
             @include media('>=lg') {
+                min-height: 38rem;
+                padding: 4rem;
+            }
+
+            @include media('>=xl') {
                 min-height: 32rem;
             }
 
@@ -148,7 +157,7 @@
 
             a {
                 margin-top: 1rem;
-                @include button-style($bg: $clr-white, $text: $clr-purple, $hover-bg: $clr-darkOrange, $hover-text: $clr-white);
+                @include button-style($bg: $clr-white, $text: $clr-purple, $hover-bg: $clr-darkPurple, $hover-text: $clr-white);
             }
         }
     }
@@ -198,6 +207,7 @@
             @include media('>lg') {
                 gap: 4rem;
                 row-gap: 2rem;
+                width: 50rem;
             }
 
             img {
@@ -262,7 +272,7 @@
 
             a {
                 margin-top: 1rem;
-                @include button-style($bg: $clr-white, $text: $clr-purple, $hover-bg: $clr-darkOrange, $hover-text: $clr-white);
+                @include button-style($bg: $clr-lightOrange, $text: $clr-white, $hover-bg: $clr-darkOrange, $hover-text: $clr-white);
             }
         }
     }

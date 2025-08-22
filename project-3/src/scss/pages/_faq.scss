@@ -1,0 +1,134 @@
+.faq {
+
+
+    .hero-bg {
+        border-bottom-left-radius: 4rem;
+
+        @include media('>=lg') {
+            border-bottom-left-radius: 20rem;
+        }
+    }
+
+    .hero {
+
+        &__wrapper {
+            @include media('>=md') {
+                grid-template-columns: 1.5fr 1fr;
+            }
+        }
+
+        &__content {
+
+            h1 {
+                width: fit-content;
+            }
+
+            a {
+                @include button-style($bg: $clr-lightOrange, $text: $clr-white, $hover-bg: $clr-darkOrange, $hover-text: $clr-white);
+            }
+
+            p {
+                font-size: 1.5rem;
+
+                @include media('>=lg') {
+                    width: 36rem;
+                }
+            }
+        }
+    }
+
+    &__wrapper {
+        display: grid;
+        gap: 4rem;
+        padding: 2rem;
+        background-color: $clr-white;
+        border-radius: 1rem;
+
+        @include media('>=md') {
+            padding: 4rem;
+        }
+    }
+
+    &__header {
+        h2 {
+            font-size: 2.5rem;
+            color: $clr-purple;
+            font-weight: 500;
+        }
+    }
+
+    &__section {
+        display: grid;
+        gap: 1rem;
+    }
+
+    &__content {
+        display: grid;
+        gap: 2rem;
+
+        @include media('>=lg') {
+            margin-left: 2rem;
+        }
+
+        h3 {
+            font-family: 'Gibson Medium', sans-serif;
+            font-size: 1rem;
+            color: $clr-purple;
+            font-weight: 400;
+        }
+        
+        p {
+            color: $clr-purple;
+            line-height: 1.25;
+        }
+    }
+
+    .accordion-content {
+        display: none;
+        padding: 0.5em 0 1em 0;
+    }
+    .accordion-toggle.active + .accordion-content {
+        display: block;
+    }
+    .accordion-toggle {
+        background: none;
+        border: none;
+        text-align: left;
+        width: 100%;
+        cursor: pointer;
+        padding: 0.5em 0;
+        display: flex;
+        gap: 0.5rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .accordion-toggle:focus {
+        outline: 2px solid #ffa500;
+    }
+    .accordion-icon {
+        transition: transform 0.3s ease;
+    }
+    .accordion-toggle.active .accordion-icon {
+        transform: rotate(180deg);
+    }
+    .faq__question {
+        border-bottom: 1px solid $clr-lightPurple;
+    }
+
+    .faq__answer {
+        margin-top: 1rem;
+    }
+
+
+    .cta {
+        margin-top: 5rem;
+        
+        &__wrapper {
+            a {
+                @include button-style($bg: $clr-white, $hover-bg: $clr-darkPurple, $text: $clr-purple, $hover-text: $clr-white);
+            }
+        }
+
+        
+    }
+}

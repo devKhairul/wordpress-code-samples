@@ -1,7 +1,7 @@
 <?php if ( have_rows('testimonials') ) : ?>
     <section class="testimonials">
         <div class="ast-container">
-            <div class="swiper mySwiper">
+            <div class="swiper testimonial-slider">
                 <div class="swiper-wrapper">
                     <?php while ( have_rows('testimonials') ) : the_row(); ?>
                         

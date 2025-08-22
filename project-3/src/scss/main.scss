@@ -36,7 +36,6 @@
 
 // 6. Page-specific styles
 @import
-  'pages/home',
   'pages/front-page',
   'pages/brands',
   'pages/agencies',
@@ -48,7 +47,13 @@
   'pages/basic-page',
   'pages/splash',
   'pages/404-page',
-  'pages/about-us';
+  'pages/about-us',
+  'pages/faq',
+  'pages/blogs',
+  'pages/single',
+  'pages/category',
+  'pages/news',
+  'pages/news-single';
 
 // 7. Themes
 @import

@@ -5,18 +5,26 @@
         &__content {
             h1 {
                 @include media('>=md') {
-                    width: 30rem;
+                    width: 40rem;
                 }
             }            
         }
         
         p {
-            font-size: 1.5rem;
+            font-size: 1rem;
             line-height: 1.25;
+
+            @include media('>=md') {
+                font-size: 1.5rem;
+            }
         }
 
         a {
             @include button-style($bg: $clr-darkPurple, $text: $clr-white, $hover-bg: $clr-lightPurple);
+        }
+
+        &-bg {
+            padding-top: 14rem;
         }
     }
 
@@ -121,7 +129,7 @@
             &::before {
                 content: url('/wp-content/uploads/2025/07/redacted-tag-1.png');
                 position: absolute;
-                top: 1rem;
+                top: 3rem;
                 left: -3rem;
                 z-index: 1;
                 opacity: 0;
@@ -144,7 +152,7 @@
                 content: url('/wp-content/uploads/2025/07/redacted-tag-2.png');
                 position: absolute;
                 top: -2rem;
-                left: 18rem;
+                left: 19rem;
                 z-index: 1;
                 opacity: 0;
                 transition: opacity 0.3s ease-in;

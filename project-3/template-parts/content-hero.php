@@ -16,7 +16,7 @@
                     
                     <?php $hero_page_link = get_field('hero_page_link'); ?>
                     <?php if ($hero_page_link) : ?>
-                        <a href="<?= $hero_page_link['url'] ?>" target="<?= $hero_page_link['target'] ?> class="hero__button"><span><?= $hero_page_link['title'] ?></span></a>
+                        <a href="<?= $hero_page_link['url'] ?>" target="<?= $hero_page_link['target'] ?>" class="hero__button"><span><?= $hero_page_link['title'] ?></span></a>
                     <?php endif; ?>
                 </div>
             <?php endif; ?>

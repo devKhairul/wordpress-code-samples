@@ -1,0 +1,44 @@
+.single-news {
+
+    .single__post {
+        gap: 1.5rem;
+    }
+
+    .single__wrapper {
+        background-color: $clr-white;
+        padding: 1rem 1rem 4rem 1rem;
+
+        @include media('>=lg') {
+            padding: 2rem 4rem 4rem 4rem;
+        }
+
+        p, h1, h2, h3, h4, h5, h6, strong, span {
+            color: $clr-black;
+        }
+    }
+
+    .single__post-header {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+
+        @include media('>=lg') {
+            flex-direction: row;
+        }
+
+        h1 {
+            margin: 0;
+            width: auto;
+        }
+    }
+
+    .single__featured-image {
+
+        img {
+            width: 14rem;
+        }
+    }
+
+}

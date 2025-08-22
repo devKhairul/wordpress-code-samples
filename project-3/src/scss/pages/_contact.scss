@@ -32,7 +32,15 @@
             align-items: center;
 
             h1 {
-                width: auto;
+                @include media('>=md') {
+                    width: 45rem;
+                }
+            }
+
+            p {
+                @include media('>=md') {
+                    width: 38rem;
+                }
             }
 
             strong {
