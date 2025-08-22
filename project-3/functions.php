@@ -102,7 +102,7 @@ add_action( 'init', 'i6_news_custom_post_type' );
  * Creator Form
  */
 function send_to_pipedrive($entry, $form) {
-    $api_token = 'bdd0d19da00124d0520509117481ace97b789401';
+    $api_token = 'SECRET_API_TOKEN';
     $url = 'https://influence6.pipedrive.com/api/v1/persons?api_token=' . $api_token;
 
 	// Pipedrive custom field keys
